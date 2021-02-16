@@ -1,0 +1,94 @@
+#contact-section {
+  margin-top: 10vh;
+}
+
+#contact-container {
+  font-family: "Roboto", sans-serif;
+  background-color: #e7eff1;
+  padding: 5%;
+  text-align: center;
+}
+
+#contact-gmail {
+  font-family: "Caveat", cursive;
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+
+.icons {
+  font-size: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.icons i {
+  margin: 3rem 3rem 0 3rem;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  color: #333333;
+}
+
+.icons i:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+}
+
+#copyright {
+  padding: 0.3rem;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+}
+
+#copyright p {
+  margin: 0;
+}
+
+@media (max-width: 1024px) {
+  #contact-container {
+    padding: 5%;
+  }
+  #contact-gmail {
+    font-size: 1.5rem;
+    padding: 0;
+  }
+  #copyright {
+    padding: 0.3rem;
+    text-align: center;
+    font-size: 1rem;
+  }
+  #copyright p {
+    margin: 0;
+  }
+  .icons {
+    font-size: 1.5rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .icons i {
+    margin: 1.5rem;
+  }
+}
+
+@media (max-width: 414px) {
+  #contact-gmail {
+    font-size: 0.7rem;
+  }
+  #copyright {
+    font-size: 0.1rem;
+  }
+  .icons {
+    font-size: 0.7rem;
+  }
+}
+/*# sourceMappingURL=footer.css.map */

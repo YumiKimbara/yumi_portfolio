@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Yumi Kimbara - Portfolio</title>
+    <meta charset="UTF-8" />
+    <!-- css -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <!-- view port -->
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <!-- bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat&display=swap"
+      rel="stylesheet"
+    />
+    <!-- font awsome -->
+    <link
+      href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+      rel="stylesheet"
+    />
+    <!-- jquery library -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <!-- JavaScript -->
+    <script defer src="script.js"></script>
+  </head>
+  <body id="home-section">
+    <header>
+      <nav class="nav-container">
+        <ul>
+          <li class="nav-bar">
+            <a class="nav-links" href="#home-section">HOME</a>
+          </li>
+          <li class="nav-bar">
+            <a class="nav-links" href="#about-section">ABOUT</a>
+          </li>
+          <li class="nav-bar">
+            <a class="nav-links" href="#works-section">WORKS</a>
+          </li>
+          <li class="nav-bar">
+            <a class="nav-links" href="#contact-section">CONTACT</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- loading -->
+    <div id="loading">
+      <div class="spinner"></div>
+    </div>
+
+    <div>
+      <div id="main-img-container">
+        <div class="main-background"></div>
+        <h1 id="main-message">
+          Hi, my name is <span id="myName">Yumi</span>. <br />I am a Front-end
+          Developer<br />
+          based in Vancouver, Canada.
+        </h1>
+        <img id="main-img" src="./image/main-pic.JPG" />
+      </div>
+      <div id="read-more">
+        <a class="read-more-details" href="#about-section"
+          >Read more
+          <i class="fas fa-angle-double-down"></i>
+        </a>
+      </div>
+      <section id="about-section">
+        <h1 class="main-title"><span>ABOUT ME</span></h1>
+        <div class="about-container">
+          <img class="section" src="./image/profile-pic.JPG" />
+          <div class="about-content">
+            <div class="about-description">
+              <h2>
+                <span id="myName">Yumi Kimbara</span>
+              </h2>
+              <h2>Front-end Developer based in Vancouver, Canada.</h2>
+              <h3>Skills</h3>
+              <p>HTML5, CSS3, Sass, JavaScript, jQuery, Bootstrap, Git</p>
+              <h3>Education</h3>
+              <p>
+                Web and Mobile App Development Co-Op Diploma in Cornerstone
+                International Community College of Canada (January 2021 -
+                December 2021)
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="works-section" class="fadein2">
+        <h1 class="main-title"><span>WORKS</span></h1>
+        <div class="container">
+          <div class="row works-container">
+            <div class="col-5">
+              <img class="work-img show-modal-1" src="./image/work1.jpg" />
+            </div>
+            <div class="col-7">
+              <div class="works-description">
+                <h3>Lorem ipsum dolor sit amet</h3>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur asdipiscing elit.
+                  Vivamus vitae ullamcorper eros, et tincidunt nunc.
+                </p>
+                <a href="javascript:void(0);"
+                  ><div class="box">
+                    <div class="box-txt">See the website</div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="row works-container">
+            <div class="col-7">
+              <div class="works-description">
+                <h3>Lorem ipsum dolor sit amet</h3>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur asdipiscing elit.
+                  Vivamus vitae ullamcorper eros, et tincidunt nunc.
+                </p>
+                <a href="javascript:void(0);"
+                  ><div class="box">
+                    <div class="box-txt">See the website</div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="col-5 works">
+              <img class="work-img show-modal-2" src="./image/work2.jpg" />
+            </div>
+          </div>
+          <div class="row works-container">
+            <div class="col-5 works">
+              <img class="work-img show-modal-3" src="./image/work3.jpg" />
+            </div>
+            <div class="col-7">
+              <div class="works-description">
+                <h3>Lorem ipsum dolor sit amet</h3>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur asdipiscing elit.
+                  Vivamus vitae ullamcorper eros, et tincidunt nunc.
+                </p>
+                <a href="javascript:void(0);"
+                  ><div class="box">
+                    <div class="box-txt">See the website</div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="row works-container work-description">
+            <div class="col-7">
+              <div class="works-description">
+                <h3>Lorem ipsum dolor sit amet</h3>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur asdipiscing elit.
+                  Vivamus vitae ullamcorper eros, et tincidunt nunc.
+                </p>
+                <a href="javascript:void(0);"
+                  ><div class="box">
+                    <div class="box-txt">See the website</div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="col-5 works">
+              <img class="work-img show-modal-4" src="./image/work4.jpg" />
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <section id="contact-section" class="fadein2">
+      <h1 class="main-title"><span>CONTACT</span></h1>
+      <div id="contact-container">
+        <p>Please feel free to contact to me!</p>
+        <p id="contact-gmail">Gmail: a13158y@gmail.com</p>
+        <a href="javascript:void(0);"
+          ><div class="box">
+            <div class="box-txt">Resume</div>
+          </div>
+        </a>
+        <div class="icons">
+          <a
+            href="https://www.linkedin.com/in/yumi-kimbara-219261204/"
+            rel="linkedin"
+            target="_blank"
+            ><i class="fab fa-linkedin"></i
+          ></a>
+          <a href="https://github.com/" rel="linkedin" target="_blank"
+            ><i class="fab fa-github"></i
+          ></a>
+        </div>
+      </div>
+    </section>
+
+    <div id="copyright">
+      <p>Copyright © 2021 Yumi Kimbara, All Rights Reserved.</p>
+    </div>
+    <!-- modal -->
+    <div class="modal-container hidden">
+      <div class="modal-content-1 hidden">
+        <a href="javascript:void(0);" class="close-modal-1">&times;</a>
+        <div class="modal-layout">
+          <div class="modal-left">
+            <img class="work-img-modal" src="./image/work1.jpg" />
+          </div>
+          <div class="modal-right">
+            <h3>Lorem ipsum dolor sit amet</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
+              porttitor odio quis enim scelerisque efficitur. Morbi pharetra,
+              nulla ut scelerisque laoreet, enim ante euismod erat, non ultrices
+              tellus mauris non enim. Morbi cursus maximus lorem, quis
+              condimentum ante pulvinar et. Aenean turpis lacus, sagittis a
+              pretium sit amet, suscipit et est. Sed vel ipsum tellus. Vivamus
+              at placerat nisi, id vehicula orci. In finibus arcu erat, sit amet
+              faucibus tellus fringilla nec. Donec varius accumsan nisl, sed
+              lacinia dui blandit vitae. Cras ullamcorper eleifend lorem luctus
+              maximus.
+            </p>
+            <p>
+              In blandit justo eu purus congue, sit amet scelerisque erat
+              pellentesque. Nullam tempus ac urna sit amet porta. Morbi eget
+              facilisis erat, sit amet mattis velit. Quisque consequat tempor
+              ex, id aliquet purus dapibus vel. Proin congue turpis sit amet
+              commodo lobortis. Nullam hendrerit interdum magna ac aliquet.
+              Pellentesque in purus nisi. Aenean et sapien sed risus molestie
+              pulvinar. Nam non rutrum neque.
+            </p>
+            <a href="javascript:void(0);"
+              ><div class="box">
+                <div class="box-txt">See the website</div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="modal-content-2 hidden">
+        <a href="javascript:void(0);" class="close-modal-2">&times;</a>
+        <div class="modal-layout">
+          <div class="modal-left">
+            <img class="work-img-modal" src="./image/work2.jpg" />
+          </div>
+          <div class="modal-right">
+            <h3>Lorem ipsum dolor sit amet</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
+              porttitor odio quis enim scelerisque efficitur. Morbi pharetra,
+              nulla ut scelerisque laoreet, enim ante euismod erat, non ultrices
+              tellus mauris non enim. Morbi cursus maximus lorem, quis
+              condimentum ante pulvinar et. Aenean turpis lacus, sagittis a
+              pretium sit amet, suscipit et est. Sed vel ipsum tellus. Vivamus
+              at placerat nisi, id vehicula orci. In finibus arcu erat, sit amet
+              faucibus tellus fringilla nec. Donec varius accumsan nisl, sed
+              lacinia dui blandit vitae. Cras ullamcorper eleifend lorem luctus
+              maximus.
+            </p>
+            <p>
+              In blandit justo eu purus congue, sit amet scelerisque erat
+              pellentesque. Nullam tempus ac urna sit amet porta. Morbi eget
+              facilisis erat, sit amet mattis velit. Quisque consequat tempor
+              ex, id aliquet purus dapibus vel. Proin congue turpis sit amet
+              commodo lobortis. Nullam hendrerit interdum magna ac aliquet.
+              Pellentesque in purus nisi. Aenean et sapien sed risus molestie
+              pulvinar. Nam non rutrum neque.
+            </p>
+            <a href="javascript:void(0);"
+              ><div class="box">
+                <div class="box-txt">See the website</div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="modal-content-3 hidden">
+        <a href="javascript:void(0);" class="close-modal-3">&times;</a>
+        <div class="modal-layout">
+          <div class="modal-left">
+            <img class="work-img-modal" src="./image/work3.jpg" />
+          </div>
+          <div class="modal-right">
+            <h3>Lorem ipsum dolor sit amet</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
+              porttitor odio quis enim scelerisque efficitur. Morbi pharetra,
+              nulla ut scelerisque laoreet, enim ante euismod erat, non ultrices
+              tellus mauris non enim. Morbi cursus maximus lorem, quis
+              condimentum ante pulvinar et. Aenean turpis lacus, sagittis a
+              pretium sit amet, suscipit et est. Sed vel ipsum tellus. Vivamus
+              at placerat nisi, id vehicula orci. In finibus arcu erat, sit amet
+              faucibus tellus fringilla nec. Donec varius accumsan nisl, sed
+              lacinia dui blandit vitae. Cras ullamcorper eleifend lorem luctus
+              maximus.
+            </p>
+            <p>
+              In blandit justo eu purus congue, sit amet scelerisque erat
+              pellentesque. Nullam tempus ac urna sit amet porta. Morbi eget
+              facilisis erat, sit amet mattis velit. Quisque consequat tempor
+              ex, id aliquet purus dapibus vel. Proin congue turpis sit amet
+              commodo lobortis. Nullam hendrerit interdum magna ac aliquet.
+              Pellentesque in purus nisi. Aenean et sapien sed risus molestie
+              pulvinar. Nam non rutrum neque.
+            </p>
+            <a href="javascript:void(0);"
+              ><div class="box">
+                <div class="box-txt">See the website</div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="modal-content-4 hidden">
+        <a href="javascript:void(0);" class="close-modal-4">&times;</a>
+        <div class="modal-layout">
+          <div class="modal-left">
+            <img class="work-img-modal" src="./image/work4.jpg" />
+          </div>
+          <div class="modal-right">
+            <h3>Lorem ipsum dolor sit amet</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
+              porttitor odio quis enim scelerisque efficitur. Morbi pharetra,
+              nulla ut scelerisque laoreet, enim ante euismod erat, non ultrices
+              tellus mauris non enim. Morbi cursus maximus lorem, quis
+              condimentum ante pulvinar et. Aenean turpis lacus, sagittis a
+              pretium sit amet, suscipit et est. Sed vel ipsum tellus. Vivamus
+              at placerat nisi, id vehicula orci. In finibus arcu erat, sit amet
+              faucibus tellus fringilla nec. Donec varius accumsan nisl, sed
+              lacinia dui blandit vitae. Cras ullamcorper eleifend lorem luctus
+              maximus.
+            </p>
+            <p>
+              In blandit justo eu purus congue, sit amet scelerisque erat
+              pellentesque. Nullam tempus ac urna sit amet porta. Morbi eget
+              facilisis erat, sit amet mattis velit. Quisque consequat tempor
+              ex, id aliquet purus dapibus vel. Proin congue turpis sit amet
+              commodo lobortis. Nullam hendrerit interdum magna ac aliquet.
+              Pellentesque in purus nisi. Aenean et sapien sed risus molestie
+              pulvinar. Nam non rutrum neque.
+            </p>
+            <a href="javascript:void(0);"
+              ><div class="box">
+                <div class="box-txt">See the website</div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

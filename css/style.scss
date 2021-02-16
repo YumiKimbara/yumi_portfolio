@@ -1,0 +1,758 @@
+@import "header";
+@import "footer";
+@import "variable";
+
+* {
+  color: $fontColor;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+//////////////////////////////////////////////
+//loading
+#loading {
+  width: 100vw;
+  height: 100vh;
+  transition: all 6s ease-in-out;
+  background-color: #e7eff1;
+  //cover loading screen to the contents
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+}
+
+//spinnerのアニメーション
+@keyframes sk-scaleout {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+.spinner {
+  //spinnerの大きさ
+  width: 100px;
+  height: 100px;
+  //spinnerの配置位置
+  margin: 300px auto;
+  //spinnerの色
+  background-color: #fff;
+  //spinnerの丸さ
+  border-radius: 100%;
+  animation: sk-scaleout 1s infinite ease-in-out;
+}
+
+.loaded {
+  opacity: 0;
+  visibility: hidden;
+}
+
+//////////////////////////////////////////////
+//main section
+#main-img-container {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0 0 4% 8%;
+  padding-top: 8%;
+  align-items: center;
+}
+
+.main-background {
+  width: 40%;
+  height: 70vh;
+  //@@@change shape of things
+  clip-path: polygon(19% 0, 83% 0, 83% 100%, 19% 100%);
+  background-color: #e7eff1;
+  position: relative;
+  left: -5%;
+}
+
+#myName {
+  background: $underline;
+}
+
+@keyframes main-message-anime {
+  0% {
+    opacity: 0;
+    transform: translateX(-30%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes main-img-anime {
+  0% {
+    opacity: 0;
+    transform: translateX(30%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+#main-message {
+  opacity: 0;
+  font-family: $font2;
+  font-size: $h1Font;
+  position: absolute;
+  top: 30%;
+  left: 15%;
+  width: 35%;
+  animation: 2s main-message-anime ease-out;
+  animation-delay: 3.2s;
+  animation-fill-mode: forwards;
+}
+
+#main-img {
+  opacity: 0;
+  width: 30%;
+  clip-path: polygon(1% 7%, 100% 7%, 100% 85%, 0 85%);
+  position: absolute;
+  top: 40%;
+  right: 20%;
+  animation: 2s main-img-anime ease-out;
+  animation-delay: 3.2s;
+  //@@@keep last keyframe animation after finishing animation
+  animation-fill-mode: forwards;
+}
+
+#read-more {
+  display: flex;
+  justify-content: center;
+  font-size: $h3Font;
+  align-items: center;
+}
+
+.read-more-details {
+  padding: 0 0.1rem;
+  color: $fontColor;
+  &:hover {
+    color: $fontColor;
+    text-decoration: none;
+  }
+}
+
+.main-title {
+  font-family: $font2;
+  font-size: $h1Font;
+  padding-left: 10rem;
+  padding-bottom: 1rem;
+  span {
+    background: $underline;
+  }
+}
+
+//////////////////////////////////////////////
+//about section
+.section {
+  position: absolute;
+  width: 25%;
+  z-index: 0;
+  top: 10vh;
+  left: 10%;
+  border-radius: 5px;
+}
+
+//positionをrelativeにすればheightの設定は１箇所でOK
+@mixin displayCenter {
+  display: flex;
+  justify-content: center;
+}
+
+.about-container {
+  position: relative;
+  @include displayCenter;
+}
+
+#about-section {
+  height: 100vh;
+  position: relative;
+  padding-top: $section;
+}
+
+.about-content {
+  position: absolute;
+  background-color: $mainColor;
+  height: 70vh;
+  width: 70%;
+  margin: 1% 10%;
+  z-index: -1;
+  clip-path: polygon(20% 0, 100% 0, 100% 80%, 80% 100%, 0 100%, 0 20%);
+}
+
+.about-description {
+  margin: 10% 15% 0% 45%;
+  h2 {
+    font-family: $font2;
+    font-size: $h2Font;
+  }
+
+  h3 {
+    font-size: $h3Font;
+    margin-top: 1.3rem;
+    font-family: $font1;
+  }
+
+  p {
+    font-size: $pFont;
+    font-family: $font1;
+  }
+}
+
+//////////////////////////////////////////////
+//work section
+.work-img {
+  width: 30vw;
+  border-radius: 5px;
+  &:hover {
+    cursor: pointer;
+    opacity: 0.5;
+  }
+}
+
+.works-container {
+  margin: 0;
+  padding-bottom: 5%;
+  text-align: center;
+  align-items: center;
+}
+
+.works-description {
+  // Bootstrapにpaddingが設定されているから、
+  // 新しくpaddingを変更する場合は!importantで優先順位を決める必要がある。
+  padding: 0 3rem;
+  font-family: $font1;
+  h3 {
+    font-size: $h3Font;
+  }
+  p {
+    font-size: $pFont;
+    margin-bottom: 2rem;
+  }
+}
+
+#works-section {
+  padding-top: $section;
+}
+
+//////////////////////////////////////////////
+//modal
+.hidden {
+  display: none;
+}
+
+.modal-container {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 999;
+}
+
+@mixin modal-function {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  border: 10px solid $mainColor;
+  border-radius: 5px;
+  width: 75%;
+  height: 35rem;
+  z-index: 99999;
+}
+
+.modal-content-1 {
+  @include modal-function;
+}
+
+.modal-content-2 {
+  @include modal-function;
+}
+
+.modal-content-3 {
+  @include modal-function;
+}
+
+.modal-content-4 {
+  @include modal-function;
+}
+
+.modal-layout {
+  display: flex;
+  justify-content: space-around;
+  padding: 5rem 2rem;
+}
+
+.modal-left {
+  width: 30%;
+  padding-right: 3rem;
+}
+
+.modal-right {
+  width: 65%;
+  font-family: $font1;
+  position: relative;
+
+  h3 {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .box {
+    position: absolute;
+    left: 40%;
+    bottom: -15%;
+    width: 10vw;
+  }
+}
+
+.work-img-modal {
+  width: 20vw;
+  border-radius: 5px;
+}
+
+//made function for close modal style
+@mixin close-modals {
+  color: $fontColor;
+  font-size: $h1Font;
+  position: absolute;
+  top: 2.5rem;
+  right: 2.5rem;
+  text-decoration: none;
+}
+
+.close-modal-1 {
+  @include close-modals;
+  &:hover {
+    @include close-modals;
+  }
+}
+
+.close-modal-2 {
+  @include close-modals;
+  &:hover {
+    @include close-modals;
+  }
+}
+
+.close-modal-3 {
+  @include close-modals;
+  &:hover {
+    @include close-modals;
+  }
+}
+
+.close-modal-4 {
+  @include close-modals;
+  &:hover {
+    @include close-modals;
+  }
+}
+
+//////////////////////////////////////////////
+//box
+.box {
+  position: relative;
+  padding: 0.5rem;
+  width: 10vw;
+  transition: 0.3s;
+  display: inline-block;
+  //@@@set translate and box-shadow to make them look like a real button
+  &:hover {
+    background-color: $subColor;
+    transition: 0.3s;
+    transform: translateY(-3px);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+  }
+  &:active {
+    transform: translateY(-1px);
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+  }
+  a {
+    color: $fontColor;
+    text-decoration: none;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+//@@@brakets
+.box::before,
+.box::after,
+.box-txt::before,
+.box-txt::after {
+  position: absolute;
+  content: "";
+  width: 7px;
+  height: 7px;
+}
+
+.box::before {
+  top: 0;
+  left: 0;
+  border-top: 1px solid #333333;
+  border-left: 1px solid #333333;
+}
+.box-txt::before {
+  top: 0;
+  right: 0;
+  border-top: 1px solid #333333;
+  border-right: 1px solid #333333;
+}
+
+.box::after {
+  bottom: 0;
+  left: 0;
+  border-bottom: 1px solid #333333;
+  border-left: 1px solid #333333;
+}
+.box-txt::after {
+  bottom: 0;
+  right: 0;
+  border-bottom: 1px solid #333333;
+  border-right: 1px solid #333333;
+}
+
+.box-txt {
+  width: 100%;
+  text-align: center;
+}
+
+//////////////////////////////////////////////
+//media query for ipad pro
+@media (max-width: 1024px) {
+  #main-img-container {
+    padding-top: 10%;
+    padding-bottom: 7%;
+  }
+
+  .main-background {
+    height: 35vh;
+    left: -10%;
+  }
+
+  #main-message {
+    font-size: $h1Font3;
+    top: 15%;
+    left: 15%;
+    width: 35%;
+  }
+
+  #main-img {
+    width: 25%;
+    top: 25%;
+    right: 23%;
+  }
+
+  #read-more {
+    font-size: $h3Font3;
+    align-items: center;
+  }
+  .main-title {
+    font-size: $h1Font3;
+    text-align: center;
+    padding: 0;
+  }
+
+  .about-content {
+    height: 35vh;
+  }
+
+  .about-description {
+    margin: 10% 10% 0% 40%;
+    h2 {
+      font-size: $h2Font3;
+    }
+    h3 {
+      font-size: $h3Font3;
+    }
+    p {
+      font-size: $pFont3;
+    }
+  }
+
+  #about-section {
+    height: 45vh;
+  }
+
+  .works-container {
+    margin: 5rem;
+    text-align: center;
+    align-items: center;
+  }
+
+  .works-description {
+    padding: 0;
+    h3 {
+      font-size: $h3Font3;
+    }
+    p {
+      font-size: $pFont3;
+      margin-bottom: 1rem;
+      padding: 0;
+    }
+  }
+
+  .works-details {
+    font-size: $pFont3;
+    padding: 5px;
+  }
+
+  .work-img {
+    width: 100%;
+  }
+  .box-txt {
+    font-size: $pFont2;
+  }
+
+  .modal-content-1 {
+    overflow: scroll;
+    padding-bottom: 2rem;
+  }
+  //.modal-content-2 .modal-content-3 .modal-content-4
+
+  .modal-layout {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .modal-left {
+    text-align: center;
+    width: 100%;
+    padding-right: 0;
+    padding-top: 1rem;
+  }
+
+  .modal-right {
+    width: 100%;
+    padding-bottom: 1rem;
+
+    h3 {
+      margin: 1rem 0;
+    }
+
+    .box {
+      text-align: center;
+      bottom: -3%;
+      left: 35%;
+      width: 20vw;
+    }
+  }
+
+  .work-img-modal {
+    width: 30vw;
+  }
+}
+
+//////////////////////////////////////////////
+//media query for ipad
+@media (max-width: 768px) {
+  .about-content {
+    height: 50vh;
+  }
+  #about-section {
+    height: 60vh;
+  }
+}
+
+//////////////////////////////////////////////
+//media query for Surface Duo
+@media (max-width: 540px) {
+  #main-img-container {
+    padding-top: 15%;
+  }
+
+  .main-background {
+    height: 40vh;
+  }
+
+  #main-message {
+    font-size: $h1Font3;
+    top: 10%;
+    width: 45%;
+  }
+
+  #main-img {
+    width: 30%;
+    top: 30%;
+  }
+
+  .about-content {
+    height: 80vh;
+  }
+
+  #about-section {
+    height: 95vh;
+  }
+}
+
+//////////////////////////////////////////////
+//media query for Responsible
+@media (max-width: 510px) {
+  .main-background {
+    height: 30vh;
+  }
+
+  #main-img {
+    top: 25%;
+  }
+
+  .about-content {
+    height: 60vh;
+  }
+
+  #about-section {
+    height: 80vh;
+  }
+}
+
+//////////////////////////////////////////////
+//media query for iphone
+@media (max-width: 414px) {
+  .main-background {
+    height: 30vh;
+  }
+
+  #main-message {
+    font-size: $h1Font2;
+    top: 15%;
+  }
+
+  #main-img {
+    width: 30%;
+    top: 25%;
+    right: 23%;
+  }
+  #main-img-container {
+    padding-top: 5rem;
+  }
+
+  #read-more {
+    font-size: $h3Font2;
+  }
+  .main-title {
+    font-size: $h1Font2;
+  }
+
+  .about-content {
+    height: 50vh;
+  }
+
+  #about-section {
+    height: 60vh;
+  }
+
+  .about-description {
+    h2 {
+      font-size: $h2Font2;
+    }
+    h3 {
+      font-size: $h2Font2;
+    }
+    p {
+      font-size: $pFont2;
+    }
+  }
+
+  .works-container {
+    margin: 2rem;
+  }
+
+  .works-description {
+    h3 {
+      font-size: $h3Font2;
+    }
+    p {
+      font-size: $pFont2;
+    }
+  }
+
+  .works-details {
+    font-size: $pFont2;
+  }
+
+  .box {
+    width: 25vw;
+  }
+
+  .box-txt {
+    font-size: $pFont2;
+  }
+}
+
+//////////////////////////////////////////////
+//media query for Moto G4
+@media (max-width: 360px) {
+  .about-content {
+    height: 60vh;
+  }
+
+  #about-section {
+    height: 70vh;
+  }
+
+  .modal-right {
+    h3 {
+      font-size: $h3Font2;
+    }
+
+    p {
+      font-size: $pFont2;
+    }
+
+    .box {
+      font-size: $pFont2;
+      left: 25%;
+      width: 30vw;
+    }
+  }
+
+  .work-img-modal {
+    width: 30vw;
+  }
+}
+
+//////////////////////////////////////////////
+//media query for Galaxy Fold
+@media (max-width: 280px) {
+  #about-section {
+    height: 70vh;
+  }
+
+  @mixin close-modal-function {
+    top: 0rem;
+    right: 1rem;
+  }
+
+  .close-modal-1 {
+    @include close-modal-function;
+  }
+
+  .close-modal-2 {
+    @include close-modal-function;
+  }
+  .close-modal-3 {
+    @include close-modal-function;
+  }
+  .close-modal-4 {
+    @include close-modal-function;
+  }
+}

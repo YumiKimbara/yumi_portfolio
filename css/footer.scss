@@ -1,0 +1,116 @@
+@import "variable";
+
+#contact-section {
+  margin-top: $section;
+}
+
+@mixin btnCss {
+  border: 2px solid $subColor;
+  padding: 10px;
+  border-radius: 5px;
+  color: $fontColor;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+@mixin btnCssHover {
+  background-color: $subColor;
+  transition: 0.3s;
+  color: $fontColor;
+  text-decoration: none;
+}
+
+#contact-container {
+  font-family: $font1;
+  background-color: $mainColor;
+  padding: 5%;
+  text-align: center;
+}
+
+#contact-gmail {
+  font-family: $font2;
+  font-size: $h2Font;
+  padding: 1rem;
+}
+
+@mixin displayCenter {
+  display: flex;
+  justify-content: center;
+}
+
+.icons {
+  font-size: $IconFont;
+  @include displayCenter;
+  i {
+    margin: 3rem 3rem 0 3rem;
+    //0.3s to go back
+    transition-duration: 0.3s;
+    color: $fontColor;
+
+    &:hover {
+      transform: scale(1.2);
+      transition-duration: 0.3s;
+    }
+  }
+}
+
+#copyright {
+  padding: 0.3rem;
+  text-align: center;
+  font-family: $font1;
+  font-size: $pFont;
+  p {
+    margin: 0;
+  }
+}
+
+//////////////////////////////////////////////
+//media query for ipad pro
+
+@media (max-width: 1024px) {
+  #contact-container {
+    padding: 5%;
+  }
+
+  #contact-gmail {
+    font-size: $h2Font3;
+    padding: 0;
+  }
+
+  #copyright {
+    padding: 0.3rem;
+    text-align: center;
+    font-size: $pFont3;
+    p {
+      margin: 0;
+    }
+  }
+
+  .icons {
+    font-size: $IconFont3;
+    @include displayCenter;
+    i {
+      margin: 1.5rem;
+    }
+  }
+}
+
+//////////////////////////////////////////////
+//no media query for ipad pro
+
+//////////////////////////////////////////////
+//media query for iphone
+
+@media (max-width: 414px) {
+  #contact-gmail {
+    font-size: $h2Font2;
+  }
+
+  #copyright {
+    font-size: $pFont2;
+  }
+
+  .icons {
+    font-size: $IconFont2;
+  }
+}
