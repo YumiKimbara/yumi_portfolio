@@ -15,15 +15,15 @@ ScrollReveal().reveal(".fadein2", {
 //Javascript
 //Spinner
 //@@@loadingの2秒後にloadedをaddする
-window.onload = function () {
-  const spinner = document.getElementById("loading");
-  setTimeout(function () {
-    spinner.classList.add("loaded");
-  }, 2000);
-};
+// window.onload = function () {
+//   const spinner = document.getElementById("loading");
+//   setTimeout(function () {
+//     spinner.classList.add("loaded");
+//   }, 2000);
+// };
 
 //Scroll to each sections from navigation
-document.querySelectorAll(".nav-links").forEach(function (el) {
+document.querySelectorAll(".navLinks").forEach(function (el) {
   el.addEventListener("click", function (e) {
     //prevent scroll
     e.preventDefault();
@@ -33,7 +33,7 @@ document.querySelectorAll(".nav-links").forEach(function (el) {
 });
 
 //Scroll to about Section from read more button
-document.querySelectorAll(".read-more-details").forEach(function (el) {
+document.querySelectorAll(".readMoreDetails").forEach(function (el) {
   el.addEventListener("click", function (e) {
     //prevent scroll
     e.preventDefault();
@@ -43,67 +43,54 @@ document.querySelectorAll(".read-more-details").forEach(function (el) {
 });
 
 //modal open
-const modalContainer = document.querySelector(".modal-container");
-const modalContents1 = document.querySelector(".modal-content-1");
-const modalContents2 = document.querySelector(".modal-content-2");
-const modalContents3 = document.querySelector(".modal-content-3");
-const modalContents4 = document.querySelector(".modal-content-4");
+// const modalContainer = document.querySelector(".modalContainer");
+// const modalContents1 = document.querySelector(".modalContent-1");
+// const modalContents2 = document.querySelector(".modalContent-2");
+// const modalContents3 = document.querySelector(".modalContent-3");
+// const modalContents4 = document.querySelector(".modalContent-4");
 
-const btnsOpenModal1 = document.querySelector(".show-modal-1");
-const btnsOpenModal2 = document.querySelector(".show-modal-2");
-const btnsOpenModal3 = document.querySelector(".show-modal-3");
-const btnsOpenModal4 = document.querySelector(".show-modal-4");
-const btnCloseModal1 = document.querySelector(".close-modal-1");
-const btnCloseModal2 = document.querySelector(".close-modal-2");
-const btnCloseModal3 = document.querySelector(".close-modal-3");
-const btnCloseModal4 = document.querySelector(".close-modal-4");
+// const btnsOpenModal1 = document.querySelector(".showModal-1");
+// const btnsOpenModal2 = document.querySelector(".showModal-2");
+// const btnCloseModal1 = document.querySelector(".closeModal-1");
+// const btnCloseModal2 = document.querySelector(".closeModal-2");
 
-const openModal1 = function () {
-  modalContainer.classList.remove("hidden");
-  modalContents1.classList.remove("hidden");
-};
+// const openModal1 = function () {
+//   modalContainer.classList.remove("hidden");
+//   modalContents1.classList.remove("hidden");
+// };
 
-const openModal2 = function () {
-  modalContainer.classList.remove("hidden");
-  modalContents2.classList.remove("hidden");
-};
+// const openModal2 = function () {
+//   modalContainer.classList.remove("hidden");
+//   modalContents2.classList.remove("hidden");
+// };
 
-const openModal3 = function () {
-  modalContainer.classList.remove("hidden");
-  modalContents3.classList.remove("hidden");
-};
+// const closeModal1 = function () {
+//   modalContainer.classList.add("hidden");
+//   modalContents1.classList.add("hidden");
+// };
 
-const openModal4 = function () {
-  modalContainer.classList.remove("hidden");
-  modalContents4.classList.remove("hidden");
-};
+// const closeModal2 = function () {
+//   modalContainer.classList.add("hidden");
+//   modalContents2.classList.add("hidden");
+// };
 
-const closeModal1 = function () {
-  modalContainer.classList.add("hidden");
-  modalContents1.classList.add("hidden");
-};
+// btnsOpenModal1.addEventListener("click", openModal1);
+// btnsOpenModal2.addEventListener("click", openModal2);
 
-const closeModal2 = function () {
-  modalContainer.classList.add("hidden");
-  modalContents2.classList.add("hidden");
-};
+// btnCloseModal1.addEventListener("click", closeModal1);
+// btnCloseModal2.addEventListener("click", closeModal2);
 
-const closeModal3 = function () {
-  modalContainer.classList.add("hidden");
-  modalContents3.classList.add("hidden");
-};
+const seeTheWebsite1 = document.querySelector(".seeTheWebsite1");
+seeTheWebsite1.addEventListener("click", () => {
+  window.open("https://yumi0127.github.io/weather-app/");
+});
 
-const closeModal4 = function () {
-  modalContainer.classList.add("hidden");
-  modalContents4.classList.add("hidden");
-};
+const seeTheWebsite2 = document.querySelector(".seeTheWebsite2");
+seeTheWebsite2.addEventListener("click", () => {
+  window.open("https://yumi0127.github.io/pokedex/");
+});
 
-btnsOpenModal1.addEventListener("click", openModal1);
-btnsOpenModal2.addEventListener("click", openModal2);
-btnsOpenModal3.addEventListener("click", openModal3);
-btnsOpenModal4.addEventListener("click", openModal4);
-
-btnCloseModal1.addEventListener("click", closeModal1);
-btnCloseModal2.addEventListener("click", closeModal2);
-btnCloseModal3.addEventListener("click", closeModal3);
-btnCloseModal4.addEventListener("click", closeModal4);
+const seeTheWebsite3 = document.querySelector(".seeTheWebsite3");
+seeTheWebsite3.addEventListener("click", () => {
+  window.open("https://react-ecommerce-app-eta.vercel.app/");
+});

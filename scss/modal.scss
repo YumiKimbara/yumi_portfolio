@@ -1,0 +1,220 @@
+//////////////////////////////////////////////
+//modal
+.hidden {
+  display: none;
+}
+
+.modalContainer {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 999;
+}
+
+@mixin modalFunction {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  border: 10px solid $mainColor;
+  border-radius: 5px;
+  width: 75%;
+  height: 35rem;
+  z-index: 99999;
+  transition: all 0.5s;
+}
+
+.modalContent1 {
+  @include modalFunction;
+}
+
+.modalContent2 {
+  @include modalFunction;
+}
+
+.modalContent3 {
+  @include modalFunction;
+}
+
+.modalContent4 {
+  @include modalFunction;
+}
+
+.modalLayout {
+  display: flex;
+  justify-content: space-around;
+  padding: 5rem 2rem;
+}
+
+.modalLeft {
+  width: 30%;
+  padding-right: 3rem;
+}
+
+.modalRight {
+  width: 65%;
+  padding: 2rem;
+  font-family: $font1;
+  position: relative;
+
+  h3 {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .box {
+    position: absolute;
+    left: 40%;
+    bottom: -15%;
+    width: 10vw;
+  }
+}
+
+.workImgModal {
+  width: 20vw;
+  border-radius: 5px;
+}
+
+.skillIcons {
+  display: flex;
+  justify-content: center;
+  i {
+    font-size: $h2Font;
+    padding: 0.5rem;
+  }
+}
+
+//made function for close modal style
+@mixin closeModal {
+  color: $fontColor;
+  font-size: $h1Font;
+  position: absolute;
+  top: 2.5rem;
+  right: 2.5rem;
+  text-decoration: none;
+}
+
+.closeModal1 {
+  @include closeModal;
+  &:hover {
+    @include closeModal;
+  }
+}
+
+.closeModal2 {
+  @include closeModal;
+  &:hover {
+    @include closeModal;
+  }
+}
+
+.closeModal3 {
+  @include closeModal;
+  &:hover {
+    @include closeModal;
+  }
+}
+
+.closeModal4 {
+  @include closeModal;
+  &:hover {
+    @include closeModal;
+  }
+}
+
+//////////////////////////////////////////////
+//media query for ipad pro
+@media (max-width: 1024px) {
+  .modalContent1 {
+    overflow: scroll;
+    padding-bottom: 2rem;
+  }
+  //.modal-content-2 .modal-content-3 .modal-content-4
+
+  .modalLayout {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .modalLeft {
+    text-align: center;
+    width: 100%;
+    padding-right: 0;
+    padding-top: 1rem;
+  }
+
+  .modalRight {
+    width: 100%;
+    padding-bottom: 1rem;
+
+    h3 {
+      margin: 1rem 0;
+    }
+
+    .box {
+      text-align: center;
+      bottom: -3%;
+      left: 35%;
+      width: 20vw;
+    }
+  }
+
+  .workImgModal {
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+    width: 30vw;
+  }
+}
+
+//////////////////////////////////////////////
+//media query for Moto G4
+@media (max-width: 360px) {
+  .modalRight {
+    h3 {
+      font-size: $h3Font2;
+    }
+
+    p {
+      font-size: $pFont2;
+    }
+
+    .box {
+      font-size: $pFont2;
+      left: 25%;
+      width: 30vw;
+    }
+  }
+
+  .workImgModal {
+    width: 30vw;
+  }
+}
+
+//////////////////////////////////////////////
+//media query for Galaxy Fold
+@media (max-width: 280px) {
+  @mixin closeModalFunction {
+    top: 0rem;
+    right: 1rem;
+  }
+
+  .closeModal1 {
+    @include closeModalFunction;
+  }
+
+  .closeModal2 {
+    @include closeModalFunction;
+  }
+  .closeModal3 {
+    @include closeModalFunction;
+  }
+  .closeModal4 {
+    @include closeModalFunction;
+  }
+}

@@ -1,0 +1,14 @@
+@import "header";
+@import "footer";
+@import "variable";
+@import "style";
+@import "modal";
+
+* {
+  color: $fontColor;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}

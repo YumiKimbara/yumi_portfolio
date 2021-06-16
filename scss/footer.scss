@@ -1,6 +1,6 @@
 @import "variable";
 
-#contact-section {
+#contactSection {
   margin-top: $section;
 }
 
@@ -20,14 +20,14 @@
   text-decoration: none;
 }
 
-#contact-container {
+#contactContainer {
   font-family: $font1;
   background-color: $mainColor;
   padding: 5%;
   text-align: center;
 }
 
-#contact-gmail {
+#contactGmail {
   font-family: $font2;
   font-size: $h2Font;
   padding: 1rem;
@@ -68,11 +68,11 @@
 //media query for ipad pro
 
 @media (max-width: 1024px) {
-  #contact-container {
+  #contactContainer {
     padding: 5%;
   }
 
-  #contact-gmail {
+  #contactGmail {
     font-size: $h2Font3;
     padding: 0;
   }
@@ -102,7 +102,7 @@
 //media query for iphone
 
 @media (max-width: 414px) {
-  #contact-gmail {
+  #contactGmail {
     font-size: $h2Font2;
   }
 
@@ -112,5 +112,11 @@
 
   .icons {
     font-size: $IconFont2;
+  }
+
+  #contactContainer {
+    p {
+      font-size: 0.8rem;
+    }
   }
 }

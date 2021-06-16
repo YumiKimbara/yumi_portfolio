@@ -4,7 +4,7 @@
     <title>Yumi Kimbara - Portfolio</title>
     <meta charset="UTF-8" />
     <!-- css -->
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/main.css" />
     <!-- view port -->
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <!-- bootstrap -->
@@ -36,21 +36,21 @@
     <!-- JavaScript -->
     <script defer src="script.js"></script>
   </head>
-  <body id="home-section">
+  <body id="homeSection">
     <header>
-      <nav class="nav-container">
+      <nav class="navContainer">
         <ul>
-          <li class="nav-bar">
-            <a class="nav-links" href="#home-section">HOME</a>
+          <li class="navBar">
+            <a class="navLinks" href="#homeSection">HOME</a>
           </li>
-          <li class="nav-bar">
-            <a class="nav-links" href="#about-section">ABOUT</a>
+          <li class="navBar">
+            <a class="navLinks" href="#aboutSection">ABOUT</a>
           </li>
-          <li class="nav-bar">
-            <a class="nav-links" href="#works-section">WORKS</a>
+          <li class="navBar">
+            <a class="navLinks" href="#worksSection">WORKS</a>
           </li>
-          <li class="nav-bar">
-            <a class="nav-links" href="#contact-section">CONTACT</a>
+          <li class="navBar">
+            <a class="navLinks" href="#contactSection">CONTACT</a>
           </li>
         </ul>
       </nav>
@@ -62,33 +62,44 @@
     </div>
 
     <div>
-      <div id="main-img-container">
-        <div class="main-background"></div>
-        <h1 id="main-message">
-          Hi, my name is <span id="myName">Yumi</span>. <br />I am a Front-end
-          Developer<br />
-          based in Vancouver, Canada.
-        </h1>
-        <img id="main-img" src="./image/main-pic.JPG" />
+      <div id="mainImgContainer">
+        <div class="mainBackground"></div>
+        <div id="mainMessage">
+          <h1>
+            Hi, my name is <span id="myName">Yumi</span>. <br />I am a Front-end
+            Developer<br />
+            based in Vancouver, Canada.
+          </h1>
+        </div>
+        <div class="circle1"></div>
+        <div class="circle2"></div>
+        <div class="circle3"></div>
+        <div class="circle4"></div>
+        <div class="circle5"></div>
+        <!-- <img id="main-img" src="./image/main-pic.JPG" /> -->
       </div>
-      <div id="read-more">
-        <a class="read-more-details" href="#about-section"
+      <div id="readMore">
+        <a class="readMoreDetails" href="#aboutSection"
           >Read more
           <i class="fas fa-angle-double-down"></i>
         </a>
       </div>
-      <section id="about-section">
-        <h1 class="main-title"><span>ABOUT ME</span></h1>
-        <div class="about-container">
+      <section id="aboutSection">
+        <h1 class="mainTitle"><span>ABOUT ME</span></h1>
+        <div class="aboutContainer">
           <img class="section" src="./image/profile-pic.JPG" />
-          <div class="about-content">
-            <div class="about-description">
+          <div class="circle"></div>
+          <div class="aboutContent">
+            <div class="aboutDescription">
               <h2>
                 <span id="myName">Yumi Kimbara</span>
               </h2>
               <h2>Front-end Developer based in Vancouver, Canada.</h2>
               <h3>Skills</h3>
-              <p>HTML5, CSS3, Sass, JavaScript, jQuery, Bootstrap, Git</p>
+              <p>
+                HTML5, CSS3, Sass, JavaScript, jQuery, Bootstrap, Git,
+                React(started to learn!)
+              </p>
               <h3>Education</h3>
               <p>
                 Web and Mobile App Development Co-Op Diploma in Cornerstone
@@ -99,97 +110,126 @@
           </div>
         </div>
       </section>
-      <section id="works-section" class="fadein2">
-        <h1 class="main-title"><span>WORKS</span></h1>
+      <section id="worksSection" class="fadein2">
+        <h1 class="mainTitle"><span>WORKS</span></h1>
         <div class="container">
-          <div class="row works-container">
+          <div class="row worksContainer">
             <div class="col-5">
-              <img class="work-img show-modal-1" src="./image/work1.jpg" />
+              <img class="workImg showModal1" src="./image/work1.png" />
             </div>
             <div class="col-7">
-              <div class="works-description">
-                <h3>Lorem ipsum dolor sit amet</h3>
+              <div class="worksDescription">
+                <h3>Weather App</h3>
+                <div class="skillIcons">
+                  <i class="fab fa-html5"></i>
+                  <i class="fab fa-css3-alt"></i>
+                  <i class="fab fa-sass"></i>
+                  <i class="fab fa-js"></i>
+                </div>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur asdipiscing elit.
-                  Vivamus vitae ullamcorper eros, et tincidunt nunc.
+                  This app can access current, hourly and weekly weather data
+                  from around the world with Weather API. The background video
+                  will be changed depends on the current weather and time. Also
+                  you can change from celsius to fahrenheit.
                 </p>
                 <a href="javascript:void(0);"
                   ><div class="box">
-                    <div class="box-txt">See the website</div>
+                    <div class="boxTxt seeTheWebsite1">See the website</div>
                   </div>
                 </a>
               </div>
             </div>
           </div>
-          <div class="row works-container">
+          <div class="row worksContainer">
             <div class="col-7">
-              <div class="works-description">
-                <h3>Lorem ipsum dolor sit amet</h3>
+              <div class="worksDescription">
+                <h3>Pokédex</h3>
+                <!-- <div class="sample"> -->
+                <div class="skillIcons">
+                  <i class="fab fa-html5"></i>
+                  <i class="fab fa-css3-alt"></i>
+                  <i class="fab fa-sass"></i>
+                  <i class="fab fa-js"></i>
+                  <!-- </div> -->
+                  <!-- <div class="box"><p class="text">サンプル</p></div> -->
+                </div>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur asdipiscing elit.
-                  Vivamus vitae ullamcorper eros, et tincidunt nunc.
+                  This app can render any of the 898 Pokémon from PokéAPI giving
+                  the ability to receive detailed character profiles and
+                  statistics. You can search Pokémon by typing in the search box
+                  or by the types of Pokémon. You can also sort Pokémon by index
+                  or alphabet.
                 </p>
                 <a href="javascript:void(0);"
                   ><div class="box">
-                    <div class="box-txt">See the website</div>
+                    <div class="boxTxt seeTheWebsite2">See the website</div>
                   </div>
                 </a>
               </div>
             </div>
             <div class="col-5 works">
-              <img class="work-img show-modal-2" src="./image/work2.jpg" />
+              <img class="workImg showModal2" src="./image/work2.png" />
             </div>
           </div>
-          <div class="row works-container">
+          <div class="row worksContainer">
             <div class="col-5 works">
-              <img class="work-img show-modal-3" src="./image/work3.jpg" />
+              <img class="workImg showModal3" src="./image/work3.png" />
             </div>
             <div class="col-7">
-              <div class="works-description">
-                <h3>Lorem ipsum dolor sit amet</h3>
+              <div class="worksDescription">
+                <h3>E-Commerce App</h3>
+                <!-- <div class="sample"> -->
+                <div class="skillIcons">
+                  <i class="fab fa-html5"></i>
+                  <i class="fab fa-css3-alt"></i>
+                  <i class="fab fa-sass"></i>
+                  <i class="fab fa-js"></i>
+                  <i class="fab fa-react"></i>
+                  <!-- </div> -->
+                  <!-- <div class="box"><p class="text">サンプル</p></div> -->
+                </div>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur asdipiscing elit.
-                  Vivamus vitae ullamcorper eros, et tincidunt nunc.
+                  This app is E-Commerce website that you can search products,
+                  add items to the cart, and proceed the purchasing. I workded
+                  as a team, and we managed all tasks by using Trello, and
+                  Github. What I created is Search input function, Product page,
+                  and Sign In page.
                 </p>
                 <a href="javascript:void(0);"
                   ><div class="box">
-                    <div class="box-txt">See the website</div>
+                    <div class="boxTxt seeTheWebsite3">See the website</div>
                   </div>
                 </a>
               </div>
             </div>
           </div>
-          <div class="row works-container work-description">
+          <div class="row worksContainer workDescription">
             <div class="col-7">
-              <div class="works-description">
-                <h3>Lorem ipsum dolor sit amet</h3>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur asdipiscing elit.
-                  Vivamus vitae ullamcorper eros, et tincidunt nunc.
-                </p>
+              <div class="worksDescription">
+                <h3 class="comingSoon">Coming soon!</h3>
                 <a href="javascript:void(0);"
                   ><div class="box">
-                    <div class="box-txt">See the website</div>
+                    <div class="boxTxt">See the website</div>
                   </div>
                 </a>
               </div>
             </div>
             <div class="col-5 works">
-              <img class="work-img show-modal-4" src="./image/work4.jpg" />
+              <img class="workImg showModal4" src="./image/work4.jpg" />
             </div>
           </div>
         </div>
       </section>
     </div>
 
-    <section id="contact-section" class="fadein2">
-      <h1 class="main-title"><span>CONTACT</span></h1>
-      <div id="contact-container">
+    <section id="contactSection" class="fadein2">
+      <h1 class="mainTitle"><span>CONTACT</span></h1>
+      <div id="contactContainer">
         <p>Please feel free to contact to me!</p>
-        <p id="contact-gmail">Gmail: a13158y@gmail.com</p>
+        <p id="contactGmail">Gmail: a13158y@gmail.com</p>
         <a href="javascript:void(0);"
           ><div class="box">
-            <div class="box-txt">Resume</div>
+            <div class="boxTxt">Resume</div>
           </div>
         </a>
         <div class="icons">
@@ -199,7 +239,7 @@
             target="_blank"
             ><i class="fab fa-linkedin"></i
           ></a>
-          <a href="https://github.com/" rel="linkedin" target="_blank"
+          <a href="https://github.com/yumi0127" rel="linkedin" target="_blank"
             ><i class="fab fa-github"></i
           ></a>
         </div>
@@ -210,14 +250,42 @@
       <p>Copyright © 2021 Yumi Kimbara, All Rights Reserved.</p>
     </div>
     <!-- modal -->
-    <div class="modal-container hidden">
-      <div class="modal-content-1 hidden">
-        <a href="javascript:void(0);" class="close-modal-1">&times;</a>
-        <div class="modal-layout">
-          <div class="modal-left">
-            <img class="work-img-modal" src="./image/work1.jpg" />
+    <!-- <div class="modalContainer hidden">
+      <div class="modalContent1 hidden">
+        <a href="javascript:void(0);" class="closeModal1">&times;</a>
+        <div class="modalLayout">
+          <div class="modalLeft">
+            <img class="workImgModal" src="./image/work1.png" />
           </div>
-          <div class="modal-right">
+          <div class="modalRight">
+            <h3>Weather App</h3>
+            <div class="skillIcons">
+              <i class="fab fa-html5"></i>
+              <i class="fab fa-css3-alt"></i>
+              <i class="fab fa-sass"></i>
+              <i class="fab fa-js"></i>
+            </div>
+            <p>
+              This app can access current, hourly and weekly weather data from
+              around the world with Weather API. The background video will be
+              changed depends on the current weather and time. Also you can
+              change from celsius to fahrenheit.
+            </p>
+            <a href="javascript:void(0);"
+              ><div class="box">
+                <div class="boxTxt">See the website</div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="modalContent2 hidden">
+        <a href="javascript:void(0);" class="closeModal2">&times;</a>
+        <div class="modalLayout">
+          <div class="modalLeft">
+            <img class="workImgModal" src="./image/work2.png" />
+          </div>
+          <div class="modalRight">
             <h3>Lorem ipsum dolor sit amet</h3>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
@@ -242,19 +310,19 @@
             </p>
             <a href="javascript:void(0);"
               ><div class="box">
-                <div class="box-txt">See the website</div>
+                <div class="boxTxt">See the website</div>
               </div>
             </a>
           </div>
         </div>
       </div>
-      <div class="modal-content-2 hidden">
-        <a href="javascript:void(0);" class="close-modal-2">&times;</a>
-        <div class="modal-layout">
-          <div class="modal-left">
-            <img class="work-img-modal" src="./image/work2.jpg" />
+      <div class="modalContent3 hidden">
+        <a href="javascript:void(0);" class="closeModal3">&times;</a>
+        <div class="modalLayout">
+          <div class="modalLeft">
+            <img class="workImgModal" src="./image/work3.png" />
           </div>
-          <div class="modal-right">
+          <div class="modalRight">
             <h3>Lorem ipsum dolor sit amet</h3>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
@@ -279,19 +347,19 @@
             </p>
             <a href="javascript:void(0);"
               ><div class="box">
-                <div class="box-txt">See the website</div>
+                <div class="boxTxt">See the website</div>
               </div>
             </a>
           </div>
         </div>
       </div>
-      <div class="modal-content-3 hidden">
-        <a href="javascript:void(0);" class="close-modal-3">&times;</a>
-        <div class="modal-layout">
-          <div class="modal-left">
-            <img class="work-img-modal" src="./image/work3.jpg" />
+      <div class="modalContent4 hidden">
+        <a href="javascript:void(0);" class="closeModal4">&times;</a>
+        <div class="modalLayout">
+          <div class="modalLeft">
+            <img class="workImgModal" src="./image/work4.jpg" />
           </div>
-          <div class="modal-right">
+          <div class="modalRight">
             <h3>Lorem ipsum dolor sit amet</h3>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
@@ -316,49 +384,12 @@
             </p>
             <a href="javascript:void(0);"
               ><div class="box">
-                <div class="box-txt">See the website</div>
+                <div class="boxTxt">See the website</div>
               </div>
             </a>
           </div>
         </div>
       </div>
-      <div class="modal-content-4 hidden">
-        <a href="javascript:void(0);" class="close-modal-4">&times;</a>
-        <div class="modal-layout">
-          <div class="modal-left">
-            <img class="work-img-modal" src="./image/work4.jpg" />
-          </div>
-          <div class="modal-right">
-            <h3>Lorem ipsum dolor sit amet</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
-              porttitor odio quis enim scelerisque efficitur. Morbi pharetra,
-              nulla ut scelerisque laoreet, enim ante euismod erat, non ultrices
-              tellus mauris non enim. Morbi cursus maximus lorem, quis
-              condimentum ante pulvinar et. Aenean turpis lacus, sagittis a
-              pretium sit amet, suscipit et est. Sed vel ipsum tellus. Vivamus
-              at placerat nisi, id vehicula orci. In finibus arcu erat, sit amet
-              faucibus tellus fringilla nec. Donec varius accumsan nisl, sed
-              lacinia dui blandit vitae. Cras ullamcorper eleifend lorem luctus
-              maximus.
-            </p>
-            <p>
-              In blandit justo eu purus congue, sit amet scelerisque erat
-              pellentesque. Nullam tempus ac urna sit amet porta. Morbi eget
-              facilisis erat, sit amet mattis velit. Quisque consequat tempor
-              ex, id aliquet purus dapibus vel. Proin congue turpis sit amet
-              commodo lobortis. Nullam hendrerit interdum magna ac aliquet.
-              Pellentesque in purus nisi. Aenean et sapien sed risus molestie
-              pulvinar. Nam non rutrum neque.
-            </p>
-            <a href="javascript:void(0);"
-              ><div class="box">
-                <div class="box-txt">See the website</div>
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
+    </div> -->
   </body>
 </html>

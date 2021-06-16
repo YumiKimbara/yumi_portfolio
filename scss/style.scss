@@ -1,0 +1,1016 @@
+//////////////////////////////////////////////
+//loading
+// #loading {
+//   width: 100vw;
+//   height: 100vh;
+//   transition: all 6s ease-in-out;
+//   background-color: #e7eff1;
+//   //cover loading screen to the contents
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   z-index: 9999;
+// }
+
+//spinnerのアニメーション
+// @keyframes sk-scaleout {
+//   0% {
+//     transform: scale(0);
+//   }
+//   100% {
+//     transform: scale(1);
+//     opacity: 0;
+//   }
+// }
+
+// .spinner {
+//   //spinnerの大きさ
+//   width: 100px;
+//   height: 100px;
+//   //spinnerの配置位置
+//   margin: 300px auto;
+//   //spinnerの色
+//   background-color: #fff;
+//   //spinnerの丸さ
+//   border-radius: 100%;
+//   animation: sk-scaleout 1s infinite ease-in-out;
+// }
+
+.loaded {
+  opacity: 0;
+  visibility: hidden;
+}
+
+//////////////////////////////////////////////
+//main section
+
+@keyframes circleAnimation1 {
+  0% {
+    transform: rotate(0deg);
+    border-radius: 75% 34% 47% 54%/47%;
+  }
+  25% {
+    transform: rotate(90deg);
+    border-radius: 62% 38% 33% 67% / 55% 56% 44% 45%;
+  }
+  50% {
+    transform: rotate(180deg);
+    border-radius: 81% 19% 20% 80% / 68% 53% 47% 32%;
+  }
+  75% {
+    transform: rotate(270deg);
+    border-radius: 40% 40% 50% 40%/30% 50% 50%;
+  }
+  100% {
+    transform: rotate(360deg);
+    border-radius: 75% 34% 47% 54%/47%;
+  }
+}
+
+@keyframes circleAnimation2 {
+  0% {
+    transform: rotate(0deg);
+    border-radius: 27% 73% 33% 67% / 55% 56% 44% 45%;
+  }
+  25% {
+    transform: rotate(90deg);
+    border-radius: 27% 73% 24% 76% / 56% 33% 67% 44%;
+  }
+  50% {
+    transform: rotate(180deg);
+    border-radius: 75% 34% 47% 54%/47%;
+  }
+  75% {
+    transform: rotate(270deg);
+    border-radius: 70% 30% 54% 46% / 40% 50% 50% 60%;
+  }
+  100% {
+    transform: rotate(360deg);
+    border-radius: 27% 73% 33% 67% / 55% 56% 44% 45%;
+  }
+}
+
+.circle1 {
+  opacity: 0.6;
+  width: 25%;
+  position: absolute;
+  top: 15rem;
+  left: 2rem;
+  height: 300px;
+  background: $subColor; //
+  //transition: all 0.5s;
+  animation: circleAnimation1 50s infinite linear;
+  // &:hover {
+  //   color: #fff;
+  //   border-radius: 80% 30% 50% 50%/50%;
+  // }
+}
+
+.circle2 {
+  opacity: 0.6;
+  width: 20%;
+  position: absolute;
+  left: 8rem;
+  top: 7rem;
+  height: 250px;
+  background: $mainColor;
+  animation: circleAnimation2 35s infinite linear reverse;
+}
+
+.circle3 {
+  opacity: 0.6;
+  width: 20%;
+  position: absolute;
+  right: 5rem;
+  bottom: 17rem;
+  height: 250px;
+  background: $subColor;
+  animation: circleAnimation1 25s infinite linear;
+  z-index: 1;
+}
+
+.circle4 {
+  opacity: 0.6;
+  width: 25%;
+  position: absolute;
+  bottom: 3rem;
+  right: 5rem;
+  height: 300px;
+  background: $mainColor; //
+  animation: circleAnimation1 35s infinite linear reverse;
+}
+
+.circle5 {
+  opacity: 0.6;
+  width: 23%;
+  position: absolute;
+  bottom: 10rem;
+  right: 15rem;
+  height: 270px;
+  background: $subColor;
+  animation: circleAnimation2 50s infinite linear;
+  z-index: -1;
+}
+
+#mainImgContainer {
+  height: 85vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// .main-background {
+//   width: 40%;
+//   height: 70vh;
+//   //@@@change shape of things
+//   clip-path: polygon(19% 0, 83% 0, 83% 100%, 19% 100%);
+//   background-color: #e7eff1;
+//   position: relative;
+//   left: -5%;
+// }
+
+#myName {
+  background: $underline;
+}
+
+// @keyframes main-message-anime {
+//   0% {
+//     opacity: 0;
+//     transform: translateX(-30%);
+//   }
+
+//   100% {
+//     opacity: 1;
+//     transform: translate(0);
+//   }
+// }
+
+// @keyframes main-img-anime {
+//   0% {
+//     opacity: 0;
+//     transform: translateX(30%);
+//   }
+
+//   100% {
+//     opacity: 1;
+//     transform: translate(0);
+//   }
+// }
+
+#mainMessage {
+  h1 {
+    text-align: center;
+  }
+  //opacity: 0;
+  font-family: $font2;
+  font-size: $h1Font;
+  //position: absolute;
+  //top: 30%;
+  //left: 15%;
+  width: 35%;
+  // animation: 2s main-message-anime ease-out;
+  // animation-delay: 3.2s;
+  // animation-fill-mode: forwards;
+}
+
+#mainImg {
+  opacity: 0;
+  width: 30%;
+  clip-path: polygon(1% 7%, 100% 7%, 100% 85%, 0 85%);
+  position: absolute;
+  top: 40%;
+  right: 20%;
+  //animation: 2s main-img-anime ease-out;
+  animation-delay: 3.2s;
+  //@@@keep last keyframe animation after finishing animation
+  animation-fill-mode: forwards;
+}
+
+#readMore {
+  display: flex;
+  justify-content: center;
+  font-size: $h3Font;
+  align-items: center;
+}
+
+.readMoreDetails {
+  padding: 0 0.1rem;
+  color: $fontColor;
+  &:hover {
+    color: $fontColor;
+    text-decoration: none;
+  }
+}
+
+.mainTitle {
+  font-family: $font2;
+  font-size: $h1Font;
+  padding: 5rem 0 1rem 10rem;
+  margin-top: 2rem;
+  span {
+    background: $underline;
+  }
+}
+
+//////////////////////////////////////////////
+//about section
+.section {
+  position: absolute;
+  width: 25%;
+  z-index: 1;
+  top: 20vh;
+  left: 10%;
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+}
+
+.circle {
+  opacity: 0.6;
+
+  height: 320px;
+  position: absolute;
+  width: 25%;
+  z-index: 0;
+  top: 16vh;
+  left: 11%;
+  border-radius: 63% 37% 46% 54% / 37% 33% 67% 63%;
+  background: $subColor;
+}
+
+//positionをrelativeにすればheightの設定は１箇所でOK
+@mixin displayCenter {
+  display: flex;
+  justify-content: center;
+}
+
+.aboutContainer {
+  position: relative;
+  @include displayCenter;
+}
+
+#aboutSection {
+  height: 100vh;
+  position: relative;
+  //padding-top: $section;
+}
+
+.aboutContent {
+  position: absolute;
+  background-color: $mainColor;
+  height: 70vh;
+  width: 100%;
+  margin: 1% 10%;
+  z-index: -1;
+}
+
+.aboutDescription {
+  margin: 10% 15% 0% 45%;
+  h2 {
+    font-family: $font2;
+    font-size: $h2Font;
+  }
+
+  h3 {
+    font-size: $h3Font;
+    margin-top: 1.3rem;
+    font-family: $font1;
+  }
+
+  p {
+    font-size: $pFont;
+    font-family: $font1;
+  }
+}
+
+//////////////////////////////////////////////
+//work section
+.workImg::before {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.workImg {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  width: 30vw;
+  border-radius: 5px;
+  // &:hover {
+  //   cursor: pointer;
+  //   opacity: 0.5;
+  // }
+}
+
+.worksContainer {
+  margin: 0;
+  padding-bottom: 5%;
+  text-align: center;
+  align-items: center;
+}
+
+.worksDescription {
+  // Bootstrapにpaddingが設定されているから、
+  // 新しくpaddingを変更する場合は!importantで優先順位を決める必要がある。
+  padding: 2rem 3rem;
+  font-family: $font1;
+  h3 {
+    font-size: $h3Font;
+  }
+  p {
+    font-size: $pFont;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+}
+
+#worksSection {
+  padding-top: $section;
+}
+
+.comingSoon {
+  margin-bottom: 2rem;
+}
+
+//////////////////////////////////////////////
+//slill icons
+.sample {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  box-shadow: 1px 1px 1px #ccc;
+  z-index: auto;
+}
+.sample i {
+  width: 100%;
+  height: 100%;
+}
+.sample .box {
+  position: absolute;
+  width: 300px; /* 吹き出しの幅 */
+  height: 60px; /* 吹き出しの高さ */
+  top: -76px; /* 吹き出しと三角形の高さをプラスした値 */
+  left: 0;
+  border-radius: 10px 10px 10px 10px;
+  background-color: #0f0;
+  display: none;
+}
+
+.sample .box:after {
+  /* 三角形を作成 */
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  top: 60px; /* 吹き出しの高さと同じ値 */
+  left: 32px;
+  border: 16px solid transparent;
+  border-top: 16px solid #0f0;
+}
+.sample .text {
+  font-size: 16px;
+  position: absolute;
+  top: 8px;
+  left: 4px;
+  color: #000;
+}
+.sample:hover .box {
+  z-index: 2;
+  display: block;
+}
+
+//////////////////////////////////////////////
+//box
+.box {
+  position: relative;
+  padding: 0.5rem;
+  width: 10vw;
+  transition: 0.3s;
+  display: inline-block;
+  //@@@set translate and box-shadow to make them look like a real button
+  &:hover {
+    background-color: $subColor;
+    transition: 0.3s;
+    transform: translateY(-3px);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+  }
+  &:active {
+    transform: translateY(-1px);
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+  }
+  a {
+    color: $fontColor;
+    text-decoration: none;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+//@@@brakets
+.box::before,
+.box::after,
+.boxTxt::before,
+.boxTxt::after {
+  position: absolute;
+  content: "";
+  width: 7px;
+  height: 7px;
+}
+
+.box::before {
+  top: 0;
+  left: 0;
+  border-top: 1px solid #333333;
+  border-left: 1px solid #333333;
+}
+.boxTxt::before {
+  top: 0;
+  right: 0;
+  border-top: 1px solid #333333;
+  border-right: 1px solid #333333;
+}
+
+.box::after {
+  bottom: 0;
+  left: 0;
+  border-bottom: 1px solid #333333;
+  border-left: 1px solid #333333;
+}
+.boxTxt::after {
+  bottom: 0;
+  right: 0;
+  border-bottom: 1px solid #333333;
+  border-right: 1px solid #333333;
+}
+
+.boxTxt {
+  width: 100%;
+  text-align: center;
+}
+
+//////////////////////////////////////////////
+//media query for ipad pro
+@media (max-width: 1024px) {
+  #mainImgContainer {
+    height: 50vh;
+    padding-top: 10%;
+    margin-bottom: 10%;
+  }
+
+  .mainBackground {
+    height: 35vh;
+    left: -10%;
+  }
+
+  #mainMessage {
+    font-size: $h1Font3;
+    top: 15%;
+    left: 15%;
+    width: 40%;
+  }
+
+  #main-img {
+    width: 25%;
+    top: 25%;
+    right: 23%;
+  }
+
+  #readMore {
+    font-size: $h3Font3;
+    align-items: center;
+  }
+  .mainTitle {
+    font-size: $h1Font3;
+    text-align: center;
+    padding: 0;
+  }
+
+  .aboutContent {
+    height: 35vh;
+  }
+
+  .aboutDescription {
+    margin: 10% 10% 0% 40%;
+    h2 {
+      font-size: $h2Font3;
+    }
+    h3 {
+      font-size: $h3Font3;
+    }
+    p {
+      font-size: $pFont3;
+    }
+  }
+  #aboutSection {
+    padding-top: 10vh;
+  }
+
+  #aboutSection {
+    height: 45vh;
+  }
+
+  .worksContainer {
+    margin: 5rem;
+    text-align: center;
+    align-items: center;
+  }
+
+  .worksDescription {
+    padding: 0;
+    h3 {
+      font-size: $h3Font3;
+    }
+    p {
+      font-size: $pFont3;
+      margin-bottom: 1rem;
+      padding: 0;
+    }
+  }
+
+  .worksDetails {
+    font-size: $pFont3;
+    padding: 5px;
+  }
+
+  .workImg {
+    width: 100%;
+  }
+  .boxTxt {
+    font-size: 0.7rem;
+  }
+
+  .circle {
+    top: 8vh;
+    height: 290px;
+  }
+
+  .circle3 {
+    top: 20rem;
+  }
+
+  .circle4 {
+    top: 30rem;
+  }
+
+  .circle5 {
+    top: 25rem;
+  }
+
+  .section {
+    top: 12vh;
+  }
+  // .modal-content-1 {
+  //   overflow: scroll;
+  //   padding-bottom: 2rem;
+  // }
+  //.modal-content-2 .modal-content-3 .modal-content-4
+
+  // .modal-layout {
+  //   display: flex;
+  //   flex-direction: column;
+  //   padding: 1rem;
+  // }
+
+  // .modal-left {
+  //   text-align: center;
+  //   width: 100%;
+  //   padding-right: 0;
+  //   padding-top: 1rem;
+  // }
+
+  // .modal-right {
+  //   width: 100%;
+  //   padding-bottom: 1rem;
+
+  //   h3 {
+  //     margin: 1rem 0;
+  //   }
+
+  //   .box {
+  //     text-align: center;
+  //     bottom: -3%;
+  //     left: 35%;
+  //     width: 20vw;
+  //   }
+  // }
+
+  // .work-img-modal {
+  //   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+  //   width: 30vw;
+  // }
+}
+
+//////////////////////////////////////////////
+//media query for ipad
+@media (max-width: 768px) {
+  #mainMessage {
+    font-size: $h1Font3;
+    top: 10%;
+    width: 55%;
+    h1 {
+      font-size: $h1Font3;
+    }
+  }
+  .readMoreDetails {
+    font-size: $pFont3;
+  }
+
+  .aboutContent {
+    height: 50vh;
+  }
+  #aboutSection {
+    height: 60vh;
+  }
+
+  .mainTitle {
+    font-size: $h2Font3;
+  }
+
+  .aboutDescription {
+    h2 {
+      font-size: $h2Font3;
+    }
+
+    h3 {
+      font-size: $h3Font3;
+    }
+
+    p {
+      font-size: $pFont3;
+    }
+  }
+
+  .circle {
+    height: 210px;
+    top: 13vh;
+  }
+
+  .circle1 {
+    height: 230px;
+    top: 12rem;
+  }
+
+  .circle2 {
+    height: 200px;
+  }
+
+  .circle3 {
+    height: 180px;
+    right: 2rem;
+    top: 16rem;
+  }
+
+  .circle4 {
+    height: 240px;
+    top: 24rem;
+    right: 4rem;
+  }
+
+  .circle5 {
+    height: 220px;
+    top: 20rem;
+    right: 9rem;
+  }
+
+  .section {
+    top: 16vh;
+  }
+
+  .box {
+    width: 13vw;
+  }
+}
+
+//////////////////////////////////////////////
+//media query for Surface Duo
+@media (max-width: 540px) {
+  #mainImgContainer {
+    padding-top: 15%;
+  }
+
+  .mainBackground {
+    height: 40vh;
+  }
+
+  #mainMessage {
+    font-size: $h1Font3;
+    top: 10%;
+    width: 50%;
+  }
+
+  #mainImg {
+    width: 30%;
+    top: 30%;
+  }
+
+  .aboutContent {
+    height: 80vh;
+  }
+
+  #aboutSection {
+    height: 95vh;
+  }
+
+  .aboutDescription {
+    padding: 0 5rem;
+    position: relative;
+    top: 13rem;
+    margin: 0;
+  }
+
+  .circle {
+    height: 140px;
+    top: 7vh;
+    left: 40vw;
+  }
+
+  .circle1 {
+    height: 160px;
+    top: 11rem;
+  }
+
+  .circle2 {
+    height: 130px;
+    left: 5rem;
+  }
+
+  .circle3 {
+    height: 110px;
+    right: 2rem;
+    top: 13rem;
+  }
+
+  .circle4 {
+    height: 170px;
+    top: 18rem;
+    right: 4rem;
+  }
+
+  .circle5 {
+    height: 150px;
+    top: 15rem;
+    right: 7rem;
+  }
+
+  .section {
+    top: 10vh;
+    left: 37vw;
+  }
+
+  .box {
+    width: 21vw;
+  }
+
+  .worksDescription {
+    h3 {
+      font-size: 1.1rem;
+    }
+    p {
+      font-size: 0.8rem;
+      margin-top: 1rem;
+    }
+  }
+}
+
+//////////////////////////////////////////////
+//media query for Responsible
+// @media (max-width: 510px) {
+//   .mainBackground {
+//     height: 30vh;
+//   }
+
+//   #mainImg {
+//     top: 25%;
+//   }
+
+//   .aboutContent {
+//     height: 60vh;
+//   }
+
+//   #aboutSection {
+//     height: 80vh;
+//   }
+// }
+
+//////////////////////////////////////////////
+//media query for iphone
+@media (max-width: 414px) {
+  .mainBackground {
+    height: 30vh;
+  }
+
+  #mainMessage {
+    top: 15%;
+    h1 {
+      font-size: $h3Font3;
+    }
+  }
+
+  #mainImg {
+    width: 30%;
+    top: 25%;
+    right: 23%;
+  }
+  #mainImgContainer {
+    padding-top: 5rem;
+    margin-bottom: 8%;
+  }
+
+  #readMore {
+    a {
+      font-size: 0.8rem;
+    }
+  }
+  .mainTitle {
+    font-size: $h1Font2;
+  }
+
+  .aboutContent {
+    height: 58vh;
+  }
+
+  #aboutSection {
+    height: 60vh;
+  }
+
+  .aboutDescription {
+    top: 11rem;
+    h2 {
+      font-size: $h1Font2;
+    }
+    h3 {
+      font-size: $h2Font2;
+    }
+    p {
+      font-size: $pFont2;
+    }
+  }
+
+  .worksContainer {
+    margin: 2rem;
+  }
+
+  .worksDescription {
+    h3 {
+      font-size: $h3Font2;
+    }
+    p {
+      font-size: $pFont2;
+    }
+  }
+
+  .worksDetails {
+    font-size: $pFont2;
+  }
+
+  #worksSection {
+    padding-top: 25vh;
+  }
+
+  .circle {
+    height: 110px;
+    top: 6vh;
+  }
+
+  .circle1 {
+    height: 110px;
+    top: 9rem;
+  }
+
+  .circle2 {
+    height: 80px;
+  }
+
+  .circle3 {
+    height: 60px;
+    right: 1rem;
+  }
+
+  .circle4 {
+    height: 120px;
+    top: 15rem;
+    right: 1rem;
+  }
+
+  .circle5 {
+    height: 100px;
+    top: 14rem;
+    right: 3rem;
+  }
+
+  .section {
+    top: 9vh;
+  }
+
+  .box {
+    width: 25vw;
+  }
+
+  .boxTxt {
+    font-size: $pFont2;
+  }
+}
+
+//////////////////////////////////////////////
+//media query for iPhone 6/7/8
+@media (max-width: 375px) {
+}
+
+//////////////////////////////////////////////
+//media query for Moto G4
+@media (max-width: 360px) {
+  #mainMessage {
+    width: 56%;
+  }
+  .aboutContent {
+    height: 68vh;
+  }
+
+  #aboutSection {
+    height: 70vh;
+  }
+
+  .circle {
+    height: 100px;
+  }
+
+  .circle1 {
+    height: 80px;
+    top: 9rem;
+  }
+
+  .circle2 {
+    height: 70px;
+  }
+
+  .circle3 {
+    height: 60px;
+    right: 2rem;
+    top: 12rem;
+  }
+
+  .circle4 {
+    height: 90px;
+    top: 14rem;
+  }
+
+  .circle5 {
+    height: 80px;
+    top: 13rem;
+    right: 4rem;
+  }
+
+  .icons i {
+    margin: 1.2rem;
+    font-size: 1rem;
+  }
+}
+
+//////////////////////////////////////////////
+//media query for iPhone 5/SE
+@media (max-width: 320px) {
+}
+
+//////////////////////////////////////////////
+//media query for Galaxy Fold
+@media (max-width: 280px) {
+  #aboutSection {
+    height: 70vh;
+  }
+}
