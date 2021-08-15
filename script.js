@@ -82,15 +82,15 @@ document.querySelectorAll(".readMoreDetails").forEach(function (el) {
 
 const seeTheWebsite1 = document.querySelector(".seeTheWebsite1");
 seeTheWebsite1.addEventListener("click", () => {
-  window.open("https://yumi0127.github.io/weather-app/");
+  window.open("https://weather-app-54fzjlo8b-yumi0127.vercel.app/");
 });
 
 const seeTheWebsite2 = document.querySelector(".seeTheWebsite2");
 seeTheWebsite2.addEventListener("click", () => {
-  window.open("https://yumi0127.github.io/pokedex/");
+  window.open("https://pokedex-eqksvrcmv-yumi0127.vercel.app/");
 });
 
 const seeTheWebsite3 = document.querySelector(".seeTheWebsite3");
 seeTheWebsite3.addEventListener("click", () => {
-  window.open("https://react-ecommerce-app-eta.vercel.app/");
+  window.open("https://task-management-phi.vercel.app/");
 });
