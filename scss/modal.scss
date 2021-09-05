@@ -84,10 +84,10 @@
 .skillIcons {
   display: flex;
   justify-content: center;
-  i {
-    font-size: $h2Font;
-    padding: 0.5rem;
-  }
+}
+
+.skillIcon {
+  padding-right: 0.5rem;
 }
 
 //made function for close modal style

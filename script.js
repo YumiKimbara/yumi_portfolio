@@ -82,7 +82,7 @@ document.querySelectorAll(".readMoreDetails").forEach(function (el) {
 
 const seeTheWebsite1 = document.querySelector(".seeTheWebsite1");
 seeTheWebsite1.addEventListener("click", () => {
-  window.open("https://weather-app-54fzjlo8b-yumi0127.vercel.app/");
+  window.open("https://weather-app-react-redux.vercel.app/");
 });
 
 const seeTheWebsite2 = document.querySelector(".seeTheWebsite2");

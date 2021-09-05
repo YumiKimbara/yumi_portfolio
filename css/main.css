@@ -804,9 +804,9 @@
 .skillIcons {
   display: flex;
   justify-content: center; }
-  .skillIcons i {
-    font-size: 1.5rem;
-    padding: 0.5rem; }
+
+.skillIcon {
+  padding-right: 0.5rem; }
 
 .closeModal1 {
   color: #333333;
