@@ -19,6 +19,6 @@
   },
   "homepage": "https://github.com/yumi0127/yumi_portfolio#readme",
   "dependencies": {
-    "node-sass": "^6.0.0"
+    "node-sass": "^4.12.0"
   }
 }
