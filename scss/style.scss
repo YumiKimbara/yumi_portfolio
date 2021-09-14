@@ -1,47 +1,4 @@
 //////////////////////////////////////////////
-//loading
-// #loading {
-//   width: 100vw;
-//   height: 100vh;
-//   transition: all 6s ease-in-out;
-//   background-color: #e7eff1;
-//   //cover loading screen to the contents
-//   position: fixed;
-//   top: 0;
-//   left: 0;
-//   z-index: 9999;
-// }
-
-//spinnerのアニメーション
-// @keyframes sk-scaleout {
-//   0% {
-//     transform: scale(0);
-//   }
-//   100% {
-//     transform: scale(1);
-//     opacity: 0;
-//   }
-// }
-
-// .spinner {
-//   //spinnerの大きさ
-//   width: 100px;
-//   height: 100px;
-//   //spinnerの配置位置
-//   margin: 300px auto;
-//   //spinnerの色
-//   background-color: #fff;
-//   //spinnerの丸さ
-//   border-radius: 100%;
-//   animation: sk-scaleout 1s infinite ease-in-out;
-// }
-
-.loaded {
-  opacity: 0;
-  visibility: hidden;
-}
-
-//////////////////////////////////////////////
 //main section
 
 @keyframes circleAnimation1 {
@@ -90,10 +47,6 @@
   }
 }
 
-// .homeSection {
-//   width: 100%;
-// }
-
 .circle1 {
   opacity: 0.6;
   width: 25%;
@@ -102,12 +55,7 @@
   left: 2rem;
   height: 300px;
   background: $subColor; //
-  //transition: all 0.5s;
   animation: circleAnimation1 50s infinite linear;
-  // &:hover {
-  //   color: #fff;
-  //   border-radius: 80% 30% 50% 50%/50%;
-  // }
 }
 
 .circle2 {
@@ -157,78 +105,23 @@
 }
 
 #mainImgContainer {
-  // height: 85vh;
-  padding: 200px 0;
+  padding: 230px 0;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-// .main-background {
-//   width: 40%;
-//   height: 70vh;
-//   //@@@change shape of things
-//   clip-path: polygon(19% 0, 83% 0, 83% 100%, 19% 100%);
-//   background-color: #e7eff1;
-//   position: relative;
-//   left: -5%;
-// }
-
 #myName {
   background: $underline;
 }
-
-// @keyframes main-message-anime {
-//   0% {
-//     opacity: 0;
-//     transform: translateX(-30%);
-//   }
-
-//   100% {
-//     opacity: 1;
-//     transform: translate(0);
-//   }
-// }
-
-// @keyframes main-img-anime {
-//   0% {
-//     opacity: 0;
-//     transform: translateX(30%);
-//   }
-
-//   100% {
-//     opacity: 1;
-//     transform: translate(0);
-//   }
-// }
 
 #mainMessage {
   h1 {
     text-align: center;
   }
-  //opacity: 0;
   font-family: $font2;
   font-size: $h1Font;
-  //position: absolute;
-  //top: 30%;
-  //left: 15%;
   width: 35%;
-  // animation: 2s main-message-anime ease-out;
-  // animation-delay: 3.2s;
-  // animation-fill-mode: forwards;
-}
-
-#mainImg {
-  opacity: 0;
-  width: 30%;
-  clip-path: polygon(1% 7%, 100% 7%, 100% 85%, 0 85%);
-  position: absolute;
-  top: 40%;
-  right: 20%;
-  //animation: 2s main-img-anime ease-out;
-  animation-delay: 3.2s;
-  //@@@keep last keyframe animation after finishing animation
-  animation-fill-mode: forwards;
 }
 
 #readMore {
@@ -251,150 +144,32 @@
   font-family: $font2;
   font-size: $h1Font;
   padding: 5rem 0 1rem 10rem;
-  margin-top: 2rem;
+  margin: 0;
   span {
     background: $underline;
   }
 }
 
-$radius: 60px;
-
-body {
-  background: #0e1e2f;
-}
-
-.wrapper {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  filter: url("#filter");
-}
-
-.ball {
-  // width: $radius;
-  width: 130px;
-  height: 130px;
-  // height: $radius;
-  position: absolute;
-  top: calc(50% - #{$radius/2});
-  // left: calc(50% - #{$radius/2});
-  left: calc(20% - #{$radius/2});
-
-  &:before {
-    background: salmon;
-    border-radius: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    content: "";
-  }
-
-  &:nth-child(1) {
-    transform: translate(-$radius * 1.1);
-    animation: x-axis-lateral 2s infinite alternate ease-in-out;
-    animation-duration: 2s;
-    &:before {
-      animation-duration: 2s;
-      animation: y-axis-lateral 1s infinite 0.1s alternate ease-in-out;
-    }
-  }
-
-  //   &:nth-child(2) {
-  //     animation: x-axis 2s infinite alternate ease-in-out;
-  //     &:before {
-  //       animation: y-axis 1s infinite 0.5s alternate ease-in-out;
-  //     }
-  //   }
-
-  //   &:nth-child(3) {
-  //     transform: translate($radius * 1.1, $radius * 1.3);
-  //     animation: x-axis-lateral 2s infinite alternate ease;
-  //     &:before {
-  //       animation: y-axis-lateral 1s infinite 0.4s alternate ease-in-out;
-  //     }
-  //   }
-}
-
-// @keyframes x-axis {
-//   0% {
-//     animation-duration: 2s;
-//     transform: translate(-$radius * 1.6);
-//   }
-//   100% {
-//     animation-duration: 2s;
-//     transform: translate($radius * 1.6);
-//   }
-// }
-
-// @keyframes y-axis {
-//   0% {
-//     animation-duration: 2s;
-//     transform: translateY($radius * 0.7);
-//   }
-//   0% {
-//     animation-duration: 2s;
-//     transform: translateY($radius * 0.9);
-//   }
-//   100% {
-//     animation-duration: 2s;
-//     transform: translateY(-$radius * 1.1) scale(0.8);
-//     background: black;
-//   }
-// }
-
-@keyframes x-axis-lateral {
-  0% {
-    transform: translate(-$radius * 0.6);
-  }
-  30% {
-    transform: translate(-$radius * 0.3);
-  }
-  60% {
-    transform: translate($radius * 0.3);
-  }
-  100% {
-    transform: translate($radius * 0.6);
-  }
-}
-
-@keyframes y-axis-lateral {
-  0% {
-    animation-duration: 2s;
-    transform: translateY($radius/5);
-  }
-  100% {
-    animation-duration: 2s;
-    transform: translateY(-$radius);
-    background: #d8d8f6;
-  }
-}
-
 //////////////////////////////////////////////
 //about section
-.section {
-  position: absolute;
-  width: 25%;
+.img {
+  width: 25vw;
   z-index: 1;
-  top: 20vh;
-  left: 10%;
   border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
 }
 
 .circle {
   opacity: 0.6;
-
-  height: 320px;
-  position: absolute;
-  width: 25%;
-  z-index: 0;
-  top: 16vh;
-  left: 11%;
+  height: 45vh;
+  width: 25vw;
+  z-index: -1;
   border-radius: 63% 37% 46% 54% / 37% 33% 67% 63%;
   background: $subColor;
+  position: absolute;
+  top: 50%;
+  left: 55%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
 //positionをrelativeにすればheightの設定は１箇所でOK
@@ -404,29 +179,22 @@ body {
 }
 
 .aboutContainer {
-  width: 100%;
+  z-index: -100;
+  background-color: $mainColor;
+
   position: relative;
   @include displayCenter;
 }
 
 #aboutSection {
-  width: 100%;
-  height: 100vh;
-  position: relative;
-  //padding-top: $section;
+  margin-top: 10%;
 }
 
 .aboutContent {
-  position: absolute;
+  padding: 7rem;
   background-color: $mainColor;
-  height: 70vh;
-  width: 100%;
-  margin: 1% 10%;
   z-index: -1;
-}
 
-.aboutDescription {
-  margin: 10% 15% 0% 45%;
   h2 {
     font-family: $font2;
     font-size: $h2Font;
@@ -444,21 +212,20 @@ body {
   }
 }
 
-//////////////////////////////////////////////
-//work section
-.workImg::before {
-  background-color: rgba(0, 0, 0, 0.4);
+.aboutImgContent {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 7rem;
+  background-color: $mainColor;
+  z-index: -1;
 }
 
+//////////////////////////////////////////////
+//work section
+
 .workImg {
-  // box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   padding: 3rem;
-  // width: 30vw;
-  // border-radius: 5px;
-  // &:hover {
-  //   cursor: pointer;
-  //   opacity: 0.5;
-  // }
   img {
     width: 30vw;
   }
@@ -487,58 +254,11 @@ body {
 }
 
 #worksSection {
-  padding-top: $section;
+  margin-top: 10%;
 }
 
 .comingSoon {
   margin-bottom: 2rem;
-}
-
-//////////////////////////////////////////////
-//slill icons
-.sample {
-  position: relative;
-  width: 300px;
-  height: 200px;
-  box-shadow: 1px 1px 1px #ccc;
-  z-index: auto;
-}
-.sample i {
-  width: 100%;
-  height: 100%;
-}
-.sample .box {
-  position: absolute;
-  width: 300px; /* 吹き出しの幅 */
-  height: 60px; /* 吹き出しの高さ */
-  top: -76px; /* 吹き出しと三角形の高さをプラスした値 */
-  left: 0;
-  border-radius: 10px 10px 10px 10px;
-  background-color: #0f0;
-  display: none;
-}
-
-.sample .box:after {
-  /* 三角形を作成 */
-  position: absolute;
-  content: "";
-  width: 0;
-  height: 0;
-  top: 60px; /* 吹き出しの高さと同じ値 */
-  left: 32px;
-  border: 16px solid transparent;
-  border-top: 16px solid #0f0;
-}
-.sample .text {
-  font-size: 16px;
-  position: absolute;
-  top: 8px;
-  left: 4px;
-  color: #000;
-}
-.sample:hover .box {
-  z-index: 2;
-  display: block;
 }
 
 //////////////////////////////////////////////
@@ -621,7 +341,7 @@ body {
   }
 
   .mainBackground {
-    height: 35vh;
+    height: 30vh;
     left: -10%;
   }
 
@@ -645,11 +365,18 @@ body {
   .mainTitle {
     font-size: $h1Font3;
     text-align: center;
-    padding: 0;
+    padding: 1rem 0;
+    margin: 0;
   }
 
   .aboutContent {
     height: 35vh;
+    padding: 5rem;
+  }
+
+  .aboutImgContent {
+    height: 35vh;
+    padding: 5rem;
   }
 
   .aboutDescription {
@@ -665,7 +392,7 @@ body {
     }
   }
   #aboutSection {
-    padding-top: 10vh;
+    padding-top: 5vh;
   }
 
   #aboutSection {
@@ -703,8 +430,11 @@ body {
   }
 
   .circle {
-    top: 8vh;
-    height: 290px;
+    height: 18vh;
+    // width: 25vw;
+    // top: 8vh;
+    // left: 13vw;
+    // height: 20vh;
   }
 
   .circle3 {
@@ -779,8 +509,15 @@ body {
   }
 
   .aboutContent {
-    height: 50vh;
+    height: 45vh;
+    padding: 3rem;
   }
+
+  .aboutImgContent {
+    height: 45vh;
+    padding: 3rem;
+  }
+
   #aboutSection {
     height: 60vh;
   }
@@ -804,8 +541,8 @@ body {
   }
 
   .circle {
-    height: 210px;
-    top: 13vh;
+    // height: 210px;
+    // top: 13vh;
   }
 
   .circle1 {
@@ -867,7 +604,22 @@ body {
   }
 
   .aboutContent {
-    height: 80vh;
+    height: 50vh;
+    padding: 3rem;
+    h2 {
+      font-size: 18px;
+    }
+    h3 {
+      font-size: 12px;
+    }
+    p {
+      font-size: 12px;
+    }
+  }
+
+  .aboutImgContent {
+    height: 50vh;
+    padding: 3rem;
   }
 
   #aboutSection {
@@ -882,9 +634,9 @@ body {
   }
 
   .circle {
-    height: 140px;
-    top: 7vh;
-    left: 40vw;
+    // height: 140px;
+    // top: 7vh;
+    // left: 40vw;
   }
 
   .circle1 {
@@ -964,9 +716,6 @@ body {
 
   #mainMessage {
     top: 15%;
-    h1 {
-      font-size: $h3Font3;
-    }
   }
 
   #mainImg {
@@ -980,16 +729,19 @@ body {
   }
 
   #readMore {
-    a {
-      font-size: 0.8rem;
-    }
   }
   .mainTitle {
-    font-size: $h1Font2;
+    // font-size: $h1Font2;
   }
 
   .aboutContent {
-    height: 58vh;
+    height: 50vh;
+    padding: 1.5rem;
+  }
+
+  .aboutImgContent {
+    height: 50vh;
+    padding: 1.5rem;
   }
 
   #aboutSection {
@@ -998,15 +750,15 @@ body {
 
   .aboutDescription {
     top: 11rem;
-    h2 {
-      font-size: $h1Font2;
-    }
-    h3 {
-      font-size: $h2Font2;
-    }
-    p {
-      font-size: $pFont2;
-    }
+    // h2 {
+    //   font-size: $h1Font2;
+    // }
+    // h3 {
+    //   font-size: $h2Font2;
+    // }
+    // p {
+    //   font-size: $pFont2;
+    // }
   }
 
   .worksContainer {
@@ -1014,25 +766,27 @@ body {
   }
 
   .worksDescription {
-    h3 {
-      font-size: $h3Font2;
-    }
-    p {
-      font-size: $pFont2;
-    }
+    // h3 {
+    //   font-size: $h3Font2;
+    // }
+    // p {
+    //   font-size: $pFont2;
+    // }
   }
 
   .worksDetails {
-    font-size: $pFont2;
+    // font-size: $pFont2;
   }
 
   #worksSection {
-    padding-top: 25vh;
+    padding-top: 5vh;
   }
 
   .circle {
-    height: 110px;
-    top: 6vh;
+    // height: 15vh;
+    // width: 25vw;
+    // height: 110px;
+    // top: 6vh;
   }
 
   .circle1 {
@@ -1070,13 +824,17 @@ body {
   }
 
   .boxTxt {
-    font-size: $pFont2;
+    // font-size: $pFont2;
   }
 }
 
 //////////////////////////////////////////////
 //media query for iPhone 6/7/8
 @media (max-width: 375px) {
+  .circle {
+    height: 14vh;
+    // width: 25vw;
+  }
 }
 
 //////////////////////////////////////////////
@@ -1094,7 +852,7 @@ body {
   }
 
   .circle {
-    height: 100px;
+    // height: 100px;
   }
 
   .circle1 {
@@ -1132,6 +890,10 @@ body {
 //////////////////////////////////////////////
 //media query for iPhone 5/SE
 @media (max-width: 320px) {
+  .circle {
+    height: 12vh;
+    // width: 25vw;
+  }
 }
 
 //////////////////////////////////////////////
@@ -1139,5 +901,9 @@ body {
 @media (max-width: 280px) {
   #aboutSection {
     height: 70vh;
+  }
+  .circle {
+    height: 10vh;
+    // width: 25vw;
   }
 }

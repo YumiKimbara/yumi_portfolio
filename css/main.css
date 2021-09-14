@@ -1,4 +1,3 @@
-@charset "UTF-8";
 .navContainer {
   width: 100%;
   height: 70px;
@@ -52,7 +51,7 @@
     padding: 0 0.5rem; } }
 
 #contactSection {
-  margin-top: 10vh; }
+  margin-top: 10%; }
 
 #contactContainer {
   font-family: "Roboto", sans-serif;
@@ -113,10 +112,6 @@
     font-size: 0.7rem; }
   #contactContainer p {
     font-size: 0.8rem; } }
-
-.loaded {
-  opacity: 0;
-  visibility: hidden; }
 
 @keyframes circleAnimation1 {
   0% {
@@ -205,7 +200,7 @@
   z-index: -1; }
 
 #mainImgContainer {
-  padding: 200px 0;
+  padding: 230px 0;
   display: flex;
   justify-content: center;
   align-items: center; }
@@ -219,16 +214,6 @@
   width: 35%; }
   #mainMessage h1 {
     text-align: center; }
-
-#mainImg {
-  opacity: 0;
-  width: 30%;
-  clip-path: polygon(1% 7%, 100% 7%, 100% 85%, 0 85%);
-  position: absolute;
-  top: 40%;
-  right: 20%;
-  animation-delay: 3.2s;
-  animation-fill-mode: forwards; }
 
 #readMore {
   display: flex;
@@ -247,116 +232,60 @@
   font-family: "Caveat", cursive;
   font-size: 2.2rem;
   padding: 5rem 0 1rem 10rem;
-  margin-top: 2rem; }
+  margin: 0; }
   .mainTitle span {
     background: linear-gradient(transparent 60%, #d8d8f6 80%); }
 
-body {
-  background: #0e1e2f; }
-
-.wrapper {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  filter: url("#filter"); }
-
-.ball {
-  width: 130px;
-  height: 130px;
-  position: absolute;
-  top: calc(50% - 30px);
-  left: calc(20% - 30px); }
-  .ball:before {
-    background: salmon;
-    border-radius: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    content: ""; }
-  .ball:nth-child(1) {
-    transform: translate(-66px);
-    animation: x-axis-lateral 2s infinite alternate ease-in-out;
-    animation-duration: 2s; }
-    .ball:nth-child(1):before {
-      animation-duration: 2s;
-      animation: y-axis-lateral 1s infinite 0.1s alternate ease-in-out; }
-
-@keyframes x-axis-lateral {
-  0% {
-    transform: translate(-36px); }
-  30% {
-    transform: translate(-18px); }
-  60% {
-    transform: translate(18px); }
-  100% {
-    transform: translate(36px); } }
-
-@keyframes y-axis-lateral {
-  0% {
-    animation-duration: 2s;
-    transform: translateY(12px); }
-  100% {
-    animation-duration: 2s;
-    transform: translateY(-60px);
-    background: #d8d8f6; } }
-
-.section {
-  position: absolute;
-  width: 25%;
+.img {
+  width: 25vw;
   z-index: 1;
-  top: 20vh;
-  left: 10%;
   border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
 
 .circle {
   opacity: 0.6;
-  height: 320px;
-  position: absolute;
-  width: 25%;
-  z-index: 0;
-  top: 16vh;
-  left: 11%;
+  height: 45vh;
+  width: 25vw;
+  z-index: -1;
   border-radius: 63% 37% 46% 54% / 37% 33% 67% 63%;
-  background: #d8d8f6; }
+  background: #d8d8f6;
+  position: absolute;
+  top: 50%;
+  left: 55%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); }
 
 .aboutContainer {
-  width: 100%;
+  z-index: -100;
+  background-color: #e7eff1;
   position: relative;
   display: flex;
   justify-content: center; }
 
 #aboutSection {
-  width: 100%;
-  height: 100vh;
-  position: relative; }
+  margin-top: 10%; }
 
 .aboutContent {
-  position: absolute;
+  padding: 7rem;
   background-color: #e7eff1;
-  height: 70vh;
-  width: 100%;
-  margin: 1% 10%;
   z-index: -1; }
-
-.aboutDescription {
-  margin: 10% 15% 0% 45%; }
-  .aboutDescription h2 {
+  .aboutContent h2 {
     font-family: "Caveat", cursive;
     font-size: 1.5rem; }
-  .aboutDescription h3 {
+  .aboutContent h3 {
     font-size: 1.2rem;
     margin-top: 1.3rem;
     font-family: "Roboto", sans-serif; }
-  .aboutDescription p {
+  .aboutContent p {
     font-size: 1rem;
     font-family: "Roboto", sans-serif; }
 
-.workImg::before {
-  background-color: rgba(0, 0, 0, 0.4); }
+.aboutImgContent {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 7rem;
+  background-color: #e7eff1;
+  z-index: -1; }
 
 .workImg {
   padding: 3rem; }
@@ -380,57 +309,10 @@ body {
     margin-bottom: 2rem; }
 
 #worksSection {
-  padding-top: 10vh; }
+  margin-top: 10%; }
 
 .comingSoon {
   margin-bottom: 2rem; }
-
-.sample {
-  position: relative;
-  width: 300px;
-  height: 200px;
-  box-shadow: 1px 1px 1px #ccc;
-  z-index: auto; }
-
-.sample i {
-  width: 100%;
-  height: 100%; }
-
-.sample .box {
-  position: absolute;
-  width: 300px;
-  /* 吹き出しの幅 */
-  height: 60px;
-  /* 吹き出しの高さ */
-  top: -76px;
-  /* 吹き出しと三角形の高さをプラスした値 */
-  left: 0;
-  border-radius: 10px 10px 10px 10px;
-  background-color: #0f0;
-  display: none; }
-
-.sample .box:after {
-  /* 三角形を作成 */
-  position: absolute;
-  content: "";
-  width: 0;
-  height: 0;
-  top: 60px;
-  /* 吹き出しの高さと同じ値 */
-  left: 32px;
-  border: 16px solid transparent;
-  border-top: 16px solid #0f0; }
-
-.sample .text {
-  font-size: 16px;
-  position: absolute;
-  top: 8px;
-  left: 4px;
-  color: #000; }
-
-.sample:hover .box {
-  z-index: 2;
-  display: block; }
 
 .box {
   position: relative;
@@ -493,7 +375,7 @@ body {
   #mainImgContainer {
     padding: 100px 0; }
   .mainBackground {
-    height: 35vh;
+    height: 30vh;
     left: -10%; }
   #mainMessage {
     font-size: 1.7rem;
@@ -510,9 +392,14 @@ body {
   .mainTitle {
     font-size: 1.7rem;
     text-align: center;
-    padding: 0; }
+    padding: 1rem 0;
+    margin: 0; }
   .aboutContent {
-    height: 35vh; }
+    height: 35vh;
+    padding: 5rem; }
+  .aboutImgContent {
+    height: 35vh;
+    padding: 5rem; }
   .aboutDescription {
     margin: 10% 10% 0% 40%; }
     .aboutDescription h2 {
@@ -522,7 +409,7 @@ body {
     .aboutDescription p {
       font-size: 1rem; }
   #aboutSection {
-    padding-top: 10vh; }
+    padding-top: 5vh; }
   #aboutSection {
     height: 45vh; }
   .worksContainer {
@@ -545,8 +432,7 @@ body {
   .boxTxt {
     font-size: 0.7rem; }
   .circle {
-    top: 8vh;
-    height: 290px; }
+    height: 18vh; }
   .circle3 {
     top: 20rem; }
   .circle4 {
@@ -566,7 +452,11 @@ body {
   .readMoreDetails {
     font-size: 1rem; }
   .aboutContent {
-    height: 50vh; }
+    height: 45vh;
+    padding: 3rem; }
+  .aboutImgContent {
+    height: 45vh;
+    padding: 3rem; }
   #aboutSection {
     height: 60vh; }
   .mainTitle {
@@ -577,9 +467,6 @@ body {
     font-size: 1.3rem; }
   .aboutDescription p {
     font-size: 1rem; }
-  .circle {
-    height: 210px;
-    top: 13vh; }
   .circle1 {
     height: 230px;
     top: 12rem; }
@@ -615,7 +502,17 @@ body {
     width: 30%;
     top: 30%; }
   .aboutContent {
-    height: 80vh; }
+    height: 50vh;
+    padding: 3rem; }
+    .aboutContent h2 {
+      font-size: 18px; }
+    .aboutContent h3 {
+      font-size: 12px; }
+    .aboutContent p {
+      font-size: 12px; }
+  .aboutImgContent {
+    height: 50vh;
+    padding: 3rem; }
   #aboutSection {
     height: 95vh; }
   .aboutDescription {
@@ -623,10 +520,6 @@ body {
     position: relative;
     top: 13rem;
     margin: 0; }
-  .circle {
-    height: 140px;
-    top: 7vh;
-    left: 40vw; }
   .circle1 {
     height: 160px;
     top: 11rem; }
@@ -661,8 +554,6 @@ body {
     height: 30vh; }
   #mainMessage {
     top: 15%; }
-    #mainMessage h1 {
-      font-size: 1.3rem; }
   #mainImg {
     width: 30%;
     top: 25%;
@@ -670,35 +561,20 @@ body {
   #mainImgContainer {
     padding: 50px 0;
     margin-bottom: 8%; }
-  #readMore a {
-    font-size: 0.8rem; }
-  .mainTitle {
-    font-size: 0.9rem; }
   .aboutContent {
-    height: 58vh; }
+    height: 50vh;
+    padding: 1.5rem; }
+  .aboutImgContent {
+    height: 50vh;
+    padding: 1.5rem; }
   #aboutSection {
     height: 60vh; }
   .aboutDescription {
     top: 11rem; }
-    .aboutDescription h2 {
-      font-size: 0.9rem; }
-    .aboutDescription h3 {
-      font-size: 0.7rem; }
-    .aboutDescription p {
-      font-size: 0.1rem; }
   .worksContainer {
     margin: 2rem; }
-  .worksDescription h3 {
-    font-size: 0.5rem; }
-  .worksDescription p {
-    font-size: 0.1rem; }
-  .worksDetails {
-    font-size: 0.1rem; }
   #worksSection {
-    padding-top: 25vh; }
-  .circle {
-    height: 110px;
-    top: 6vh; }
+    padding-top: 5vh; }
   .circle1 {
     height: 110px;
     top: 9rem; }
@@ -718,9 +594,11 @@ body {
   .section {
     top: 9vh; }
   .box {
-    width: 25vw; }
-  .boxTxt {
-    font-size: 0.1rem; } }
+    width: 25vw; } }
+
+@media (max-width: 375px) {
+  .circle {
+    height: 14vh; } }
 
 @media (max-width: 360px) {
   #mainMessage {
@@ -729,8 +607,6 @@ body {
     height: 68vh; }
   #aboutSection {
     height: 70vh; }
-  .circle {
-    height: 100px; }
   .circle1 {
     height: 80px;
     top: 9rem; }
@@ -751,9 +627,15 @@ body {
     margin: 1.2rem;
     font-size: 1rem; } }
 
+@media (max-width: 320px) {
+  .circle {
+    height: 12vh; } }
+
 @media (max-width: 280px) {
   #aboutSection {
-    height: 70vh; } }
+    height: 70vh; }
+  .circle {
+    height: 10vh; } }
 
 .hidden {
   display: none; }
@@ -836,8 +718,7 @@ body {
   font-family: "Roboto", sans-serif;
   position: relative; }
   .modalRight h3 {
-    text-align: center;
-    margin-bottom: 1rem; }
+    text-align: center; }
   .modalRight .box {
     position: absolute;
     left: 40%;
